@@ -1,0 +1,108 @@
+/*=================================
+Pricing Style
+*/
+.pricing-card {
+	background-color: $black;
+	padding: 40px;
+	position: relative;
+	@include transition();
+	
+	h2 {
+		@extend .text-mutes;
+	}
+
+	.pricing-header {
+		border-bottom: 1px solid rgba(255, 255, 255, .2);
+		margin-bottom: 40px;
+		padding-bottom: 40px;
+			@include transition();
+		.icon {
+			width: 104px;
+			height: 104px;
+			line-height: 104px;
+				@include transition();
+			background-color: $primary;
+
+		}
+	}
+
+	.price-rate {
+		@include heading;
+		color: $white;
+		font-size: 40px;
+	@include transition();
+		sub {
+			font-weight: 400;
+			font-size: 20px;
+		}
+	}
+
+	.btn {
+		background-color: $primary;
+		color: $black;
+		@include border-radius(5px);
+		display: block;
+		position: absolute;
+		bottom: -1px;
+		width: calc(100% - 80px);
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	.pricing-body{
+		padding-bottom: 60px;
+		ul{
+			@include list-clear;
+			li{
+				margin-bottom: 25px;
+				padding-left: 30px;
+				font-size: 16px;
+					@include transition();
+				@extend .text-mutes;
+				@extend .overly;
+				&::before{
+					background: url('../images/icons/checkbox-p.png')no-repeat left center;
+				}
+			}
+		}
+	}
+	&.active,&:hover{
+		background-color: $primary;
+			.pricing-header{
+				border-bottom: 1px solid rgba(0, 0, 0, .2);
+			}
+		.icon{
+			background-color: $white;
+		}
+		h2,.price-rate{
+			color: $black;
+		}
+		.pricing-body{
+			li{
+				color: $black;
+				&::before{
+					background: url('../images/icons/checkbox-b.png')no-repeat left center;
+				}
+			}
+		}
+		.btn{
+			background-color: $black;
+			color: $white;
+		}
+	}
+		@include media-breakpoint-down(xl) {
+			padding: 20px;
+	
+			.icon {
+				flex: 0 0 80px;
+				height: 80px;
+			}
+	
+			.price-rate {
+				line-height: 1
+			}
+	
+			.btn {
+				width: calc(100% - 50px);
+			}
+		}
+}

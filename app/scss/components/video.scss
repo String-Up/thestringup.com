@@ -1,0 +1,49 @@
+/*=================================
+Video Style
+*/
+.video-box{
+	max-width: 556px;
+	margin-left: auto;
+	margin-right: 0;
+	@include media-breakpoint-down(lg) {
+		margin: 0px auto 50px 0;
+	}
+	img{
+		width: 48%
+	}
+	.video-popup{
+		@include absoluteCenter;
+		width: 104px;
+		height: 104px;
+		@include border-radius(50%);
+		background-color: $sky;
+		border: 10px solid $white;
+		text-align: center;
+		display: table;
+		i{
+			display: table-cell;
+			vertical-align: middle;
+			color: $white;
+			font-size: 30px;
+		}
+	}
+}
+.video-sec{
+	padding: 200px 0;
+	@include media-breakpoint-down(lg) {
+		padding: 150px 0;
+	}
+	a.btn.btn-outline-info {
+			width: 130px;
+			height: 130px;
+			border: 2px solid $white;
+			display: inline-table;
+			text-align: center;
+			border-radius: 50%;
+			font-size: 35px;
+			i{
+				display: table-cell;
+				vertical-align: middle;
+			}
+		}
+}

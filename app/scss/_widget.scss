@@ -1,0 +1,209 @@
+/*=================================
+Widget CSS
+*/
+.widget.search-widget {
+	input {
+		border: 1px solid $border-color;
+	}
+
+	button {
+		position: absolute;
+		right: 0px;
+		top: 0px;
+		border: 0 none;
+		background: transparent;
+		width: 56px;
+		height: 100%;
+		@include border-radius(0);
+	}
+}
+
+
+
+	.widget {
+		margin-bottom: 30px;
+
+		.widget-title {
+			text-transform: uppercase;
+			font-size: 24px;
+			margin-bottom: 20px;
+		}
+
+		.widget-inner {
+			border: 1px solid $border-color;
+		}
+
+		ul {
+			@include list-clear;
+
+			li {
+				a {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					padding: 12px 15px;
+					border-bottom: 1px solid $border-color;
+					text-transform: capitalize;
+					color: $body-color;
+					font-size: 16px;
+				}
+
+				&:hover a {
+					background-color: $primary;
+					color: $dark;
+				}
+
+				&:last-child a {
+					border: 0 none;
+				}
+			}
+		}
+
+		.rc-entry {
+			margin-bottom: 15px;
+			border-bottom: 1px solid $border-color;
+			padding-bottom: 15px;
+
+			&:last-child {
+				margin-bottom: 0;
+				border-bottom: 0;
+				padding-bottom: 0;
+			}
+
+			>a {
+				padding-top: 7px;
+			}
+
+			.entry-meta {
+				span {
+					font-size: 15px;
+					color: $secondary;
+
+					i {
+						color: $primary;
+					}
+				}
+			}
+
+			.entry-title {
+				font-size: 16px;
+				line-height: 23px;
+			}
+
+			&:hover a {
+				color: $primary;
+			}
+		}
+
+		&.widget-rating input {
+			padding: 0;
+		}
+		&.instagrame-widget {
+			a{
+				margin: 0 7px 10px 0;
+				display: inline-block;
+				img{
+					@extend .rounded-2;
+				}
+				&:nth-child(3n) {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+
+
+
+.widget_tag_cloud a {
+font-weight: 700;
+	display: inline-block;
+	font-size: 14px !important;
+	line-height: 1;
+	color: $secondary;
+	padding: 8px 15px;
+	margin: 5px 5px 5px 0px;
+	text-transform: capitalize;
+	@include border-radius(5px);
+	background: $mute;
+
+	&:hover {
+		background-color: $primary;
+	}
+}
+
+.social-share2 {
+	a {
+		width: 52px;
+		height: 52px;
+		border: 1px solid $altdark;
+		display: inline-table;
+		text-align: center;
+		margin-right: 10px;
+
+		i {
+			display: table-cell;
+			vertical-align: middle;
+		}
+
+		&:hover {
+			background-color: $primary;
+			color: $secondary;
+		}
+	}
+}
+
+.trip-widget {
+	background: url('../images/serv-card-bg.png'), $primary;
+	padding: 60px 30px;
+
+	.form-group {
+		margin-bottom: 15px;
+
+	}
+}
+
+.contact-widget {
+	li {
+		margin-bottom: 20px;
+	}
+}
+
+// Shop Sidebar
+.filter .nice-select {
+	width: 214px;
+}
+
+.price-widget {
+	.widget-inner {
+		padding: 30px;
+	}
+
+	.btn {
+		padding: 6px 20px 7px;
+		font-size: 16px;
+	}
+}
+
+.noUi-horizontal {
+	height: 4px;
+	border: 0 none;
+	box-shadow: none;
+	background-color: $border-color;
+
+	.noUi-connect {
+		background: $primary;
+	}
+
+	.noUi-handle {
+		width: 18px;
+		height: 18px;
+		background-color: $primary;
+		@include border-radius(50px);
+		top: -8px;
+
+		&:after,
+		&:before {
+			display: none;
+		}
+	}
+}

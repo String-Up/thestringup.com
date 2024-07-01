@@ -1,0 +1,101 @@
+/*=================================
+About Style
+*/
+.about-txt {
+	max-width: 550px;
+
+	p {
+		margin-top: 15px;
+	}
+
+	ul {
+		@include list-clear;
+
+		li {
+			@extend .overly;
+			padding-left: 30px;
+			padding-bottom: 10px;
+
+			&::before {
+				background: url('../images/icons/checkbox.png')no-repeat left top;
+				top: 4px;
+			}
+		}
+	}
+}
+
+.about-sec {
+	padding-bottom: 120px;
+
+	.counter-wrap {
+		position: absolute;
+		width: calc(100% - 80px);
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: 30px;
+		text-align: left;
+
+		.counter-card {
+			flex: 0 0 48%;
+
+			.text-gr {
+				@include heading;
+				line-height: 1;
+				margin-bottom: 0;
+				font-size: 100px;
+				@include media-breakpoint-only(lg) {
+					font-size: 75px;
+				}
+								@include media-breakpoint-down(md) {
+									font-size: 75px;
+								}
+			}
+
+			p {
+				@extend .text-mutes;
+			}
+		}
+		@include media-breakpoint-down(sm) {
+			position: relative;
+			width: 100%;
+			bottom: -30px;
+		}
+	}
+}
+
+// CTA Actions
+.cta-sec2 {
+	@extend .overly;
+
+	&::before {
+		background: url('../images/cta-abs-left.png')no-repeat left center / contain;
+		background-color: $black;
+		width: 60%;
+		z-index: -1;
+	}
+
+	.cta-txt {
+		max-width: 550px;
+	}
+
+	&::after {
+		background: url('../images/cta-abs-right.png')no-repeat left center / contain;
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 40%;
+		height: 100%;
+		content: "";
+		z-index: -1;
+	}
+
+	.cta-actions {
+		.icon-sm {
+			font-size: 20px;
+		}
+		h4 a {
+			color: $white;
+		}
+	}
+
+}

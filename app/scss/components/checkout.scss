@@ -1,0 +1,97 @@
+/* ==================================
+Checkout Style
+*/
+.order-summery {
+	@include media-breakpoint-down(sm) {
+		margin-top: 30px;
+	}
+
+	@include media-breakpoint-only(sm) {
+		margin-top: 30px;
+	}
+}
+
+.coupon-wrap {
+	input {
+			flex: 0 0 65%;
+		}
+	@include media-breakpoint-down(lg)  {
+		margin-bottom: 20px;
+		input{
+			flex: 0 0 55%;
+		}
+	}
+}
+
+.checkout-coupon {
+	h6 {
+		margin-bottom: 0;
+		font-family: $body-font;
+		button {
+			border: 0;
+			color: $tertiary;
+			background: transparent;
+		}
+
+	}
+
+	form {
+		max-width: 600px;
+
+		.btn {
+			border-radius: 5px;
+		}
+	}
+}
+
+form.form.checkout-form {
+	label {
+			margin-bottom: 5px;
+			font-weight: 500;
+			color: $headings-color;
+			font-size: 17px;
+		}
+	
+		select {
+			padding: 17px 10px;
+			display: block !important;
+			width: 100%;
+			border: 1px solid $border-color;
+			@extend .rounded-2;
+			color: $secondary;
+			background-color: $white;
+		}
+	
+		input,select {
+			font-size: 16px;
+			margin-bottom: 30px;
+		}
+				input[type="checkbox"] {
+					width: auto;
+				}
+}
+
+
+.payment-option {
+	margin-bottom: 30px;
+
+	.accordion-button{
+		@extend .h6;
+		font-family: $body-font;
+		&:after {
+				right: 0px;
+				background: transparent;
+				border-radius: 0;
+				background-repeat: no-repeat;
+				background-position: center center;
+				background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-chevron-down' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+				box-shadow: none;
+			}
+	}
+
+	.accordion-button:not(.collapsed):after {
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-chevron-down' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+		background-color: transparent;
+		transform: rotate(0deg);
+	}
+}

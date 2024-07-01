@@ -1,0 +1,302 @@
+/*=================================
+Blog Style
+*/
+.blog-sec {
+	margin-bottom: 110px;
+
+	@include media-breakpoint-down(lg) {
+		margin-bottom: 0;
+	}
+
+	@include media-breakpoint-only(lg) {
+		margin-bottom: 140px;
+	}
+
+}
+
+.single-entry {
+	position: relative;
+
+	.entry-thumb {
+		overflow: hidden;
+		max-width: calc(100% - 85px);
+
+		img {
+			transform: scale(1);
+			@include transition(all, .8s, ease);
+		}
+	}
+
+	.entry-content {
+		padding: 30px 30px 20px;
+		background-color: $light;
+		position: absolute;
+		left: 80px;
+		top: 68%;
+		@include transition();
+		@include media-breakpoint-down(lg) {
+			left: 15px;
+		}
+		.entry-meta {
+			span {
+				margin-right: 10px;
+			}
+		}
+
+		h3 {
+			font-size: 40px;
+			line-height: 1.2;
+			margin: 10px 0 20px;
+
+			@include media-breakpoint-down(xxl) {
+				font-size: 34px;
+			}
+								@include media-breakpoint-only(lg) {
+									font-size: 28px;
+								}
+		}
+
+		a.read-more {
+			font-weight: 700;
+			color: $headings-color;
+
+			i {
+				font-size: 22px;
+				position: relative;
+				top: 2px;
+			}
+		}
+	}
+
+	&:hover a.read-more {
+		color: $headings-color;
+	}
+
+	&:hover {
+		.entry-content {
+			background-color: $primary;
+
+			a {
+				color: $black;
+			}
+		}
+
+		.entry-thumb img {
+			transform: scale(1.1);
+		}
+	}
+
+	@include media-breakpoint-down(lg) {
+		margin-bottom: 170px;
+
+	}
+
+	@include media-breakpoint-down(sm) {
+		margin-bottom: 30px;
+
+		.entry-thumb {
+			max-width: 100%;
+		}
+
+		.entry-content {
+			position: relative;
+			left: auto;
+
+			h3 {
+				font-size: 32px;
+			}
+		}
+	}
+}
+.entry-meta {
+	span {
+		margin-right: 15px;
+		font-size: 16px;
+		font-weight: 500;
+		@include media-breakpoint-down(sm) {
+			font-size: 15px;
+		}
+		i {
+			margin-right: 5px;
+			font-size: 18px;
+		}
+	}
+}
+.single-entry2 {
+	@include media-breakpoint-down(md) {
+		margin-bottom: 30px;
+	}
+	.btn-link {
+		text-decoration: none;
+		font-weight: 700;
+	}
+	.entry-media{
+		flex: 0 0 40%;
+	}
+	&.cover-entry {
+		background-size: cover;
+		background-position: center top;
+		overflow: hidden;
+		@extend .overly;
+
+		&::before {
+			background-color: $black;
+			@include opacity(.5);
+		}
+
+		.entry-meta {
+			span {
+				color: $white;
+			}
+		}
+
+		h3 a,
+		.btn-link {
+			color: $white;
+		}
+	}
+
+	&:hover h3 a,
+	&:hover .btn-link {
+		color: $sky;
+	}
+}
+.list-entry2{
+	overflow: hidden;
+	margin-bottom: 30px;
+	@include transition();
+	.entry-media{
+		flex: 0 0 40%;
+		@include media-breakpoint-down(sm) {
+			display: block;
+			min-height: 200px;
+		}
+	}
+	.entry-content{
+		padding: 20px;
+	}
+	&:hover{
+		transform: translateY(-5px);
+		h3 a{
+			color: $success;
+		}
+	}
+}
+
+.blog-info {
+	.single-entry .entry-content.bg-success h3 a {
+		color: $white;
+	}
+}
+
+.single-post {
+	.content-list {
+		@include list-clear;
+		margin: 30px 0 40px;
+
+		li {
+			width: 50%;
+			padding-left: 30px;
+			margin-bottom: 15px;
+			@extend .overly;
+
+			&::before {
+				background-color: transparent;
+				content: "\f12d";
+				font-family: "feather-icons";
+			}
+			@include media-breakpoint-down(sm) {
+				width: 100%;
+			}
+		}
+	}
+
+	.article-footer {
+		border-top: 1px solid $border-color;
+		border-bottom: 1px solid $border-color;
+
+	}
+}
+
+.social {
+	a {
+		display: inline-block;
+		padding: 10px;
+		line-height: 1;
+		background-color: $mute;
+		color: $body-color;
+		@include border-radius(5px);
+
+		&:hover {
+			background-color: $primary;
+		}
+	}
+}
+
+.post-comments {
+	>ol {
+		padding-left: 0;
+	}
+
+	ol {
+		list-style: none;
+
+	}
+
+	.comment-entry {
+		position: relative;
+		padding-right: 40px;
+		@extend .mb-4;
+
+		.comment-thumb {
+			flex: 0 0 90px;
+		}
+
+		p {
+			margin-top: 20px;
+		}
+
+		.comment-reply {
+			position: absolute;
+			right: 30px;
+			top: 30px;
+
+			img {
+				margin-right: 10px;
+			}
+		}
+	}
+}
+.blog-wrap .single-entry2 .entry-content{
+	@include media-breakpoint-down(md) {
+		margin: 30px 0;
+	}
+}
+section.blog2-sec {
+	.single-entry2 .entry-media {
+		flex: 0 0 45%;
+	}
+}
+.blog-page {
+	.single-entry2{
+		margin-bottom: 30px;
+		@include transition();
+	
+	}
+	.list-entry{
+		@extend .single-entry2;
+		margin-bottom: 30px;
+		.entry-media{
+			flex: 0 0 46%;
+		}
+		.entry-content{
+			padding: 30px 60px 30px 20px;
+			@include media-breakpoint-down(lg) {
+				padding: 15px;
+			}
+		}
+		&:hover{
+			transform: translateY(-5px);
+		}
+	}
+}

@@ -1,0 +1,122 @@
+/*=================================
+Typography CSS
+*/
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Teko:wght@600&display=swap');
+
+$body-font: 'DM Sans', sans-serif;
+$heading-font: 'Teko', sans-serif;
+
+body {
+    font-family: $body-font;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+    position: relative;
+    height: 100%;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    @include heading;
+}
+
+h1,
+.h1 {
+    @include heading-1;
+}
+
+h2,
+.h2 {
+    @include heading-2;
+}
+
+h3,
+.h3 {
+    @include heading-3;
+}
+
+h4,
+.h4 {
+    @include heading-4;
+}
+
+h5,
+.h5 {
+    @include heading-5;
+}
+
+h6,
+.h6 {
+    @include heading-6;
+}
+@include media-breakpoint-up(xxl) {
+    .container {
+        max-width: 1290px;
+    }
+}
+a {
+    color: $headings-color;
+    @include transition;
+    text-decoration: none;
+
+    &:focus,
+    &:hover {
+        text-decoration: none;
+        @include transition;
+        color: $primary;
+    }
+}
+
+input,
+textarea,
+.form-control {
+    color: $secondary;
+    width: 100%;
+    padding: 16px 20px;
+    border: 1px solid $border-color;
+    @include border-radius(5px);
+
+    &.btn {
+        cursor: auto;
+    }
+
+    &:focus {
+        outline: 0 none;
+        box-shadow: 0 0 0 0.05rem rgba(248, 188, 26, .2);
+    }
+
+    &::placeholder {
+        /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: $secondary;
+        opacity: 1;
+        /* Firefox */
+    }
+
+    &:-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+        color: $border-color;
+    }
+
+    &::-ms-input-placeholder {
+        /* Microsoft Edge */
+        color: $border-color;
+    }
+  
+}
+  input[type="checkbox"] {
+      padding: 0px;
+  }

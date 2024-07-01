@@ -1,0 +1,31 @@
+/*=================================
+Event Style
+*/
+.event-details{
+	h2{
+		font-size: 40px;
+		text-transform: uppercase;
+	}
+	p{
+		margin-bottom: 30px;
+	}
+	ul{
+		@include list-clear;
+		@extend .mb-5;
+	}
+}
+.event-item{
+	.ms-3{
+		border-bottom: 1px solid $border-color;
+		margin-bottom: 20px;
+	}
+	&:last-child {
+		.ms-3 {
+				border: 0;
+				margin-bottom: 0;
+				p{
+					margin: 0;
+				}
+			}
+	}
+}

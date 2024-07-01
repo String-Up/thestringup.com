@@ -1,0 +1,80 @@
+/* ==================================
+FAQ Style
+*/
+
+.faq-item {
+	margin-bottom: 20px;
+	overflow: hidden;
+	padding: 20px;
+	border: 1px solid $border-color;
+	@include border-radius(10px);
+
+	button {
+		text-transform: uppercase;
+		@extend .h4;
+		margin: 0;
+		padding: 0px 15px 0px 65px;
+
+		&:focus {
+			border: none;
+			box-shadow: none;
+		}
+	}
+
+	.accordion-body {
+		padding: 15px 0 0;
+		margin-top: 25px;
+		@extend .overly;
+		&::before{
+			background-color: $border-color;
+			height: 1px;
+			width: 0;
+			@include transition();
+		}
+	}
+}
+.accordion-collapse.show .accordion-body::before {
+	width: 100%;
+}
+.accordion-item:not(:first-of-type) {
+	border-top: 1px solid $border-color;
+}
+
+.accordion-button:focus {
+	border: 0 none;
+	box-shadow: none;
+}
+
+.accordion-item:first-of-type {
+	border-top-left-radius: 12px;
+	border-top-right-radius: 12px;
+}
+
+.accordion-item:last-of-type {
+	border-bottom-right-radius: 12px;
+	border-bottom-left-radius: 12px;
+}
+
+.accordion-button {
+
+	// Accordion icon
+	&::after {
+		position: absolute;
+		left: 0px;
+		width: 50px;
+		height: 50px;
+		@include border-radius(50%);
+		background-position: center center;
+		background-repeat: no-repeat;
+		@include box-shadow(0px 0px 20px rgba($black, .05));
+		background-color: $white;
+
+	}
+}
+
+.accordion-button:not(.collapsed) {
+	background-color: $white;
+	box-shadow: none;
+	color: $headings-color;
+	
+}

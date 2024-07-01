@@ -1,0 +1,228 @@
+/*=================================
+Feature Style
+*/
+.feature-sec{
+	@extend .overly;
+	&::before{
+		background: url('../images/feature-bg.png')no-repeat bottom right;
+	}
+}
+.feature-entry {
+	padding: 40px 30px;
+	border-top: 2px solid transparent;
+	@include transition();
+	@extend .overly;
+
+	&::before {
+		height: 245px;
+		width: 1px;
+		background-color: $black;
+		@include opacity(0.1);
+		top: 50%;
+		transform: translateY(-50%);
+		@include transition();
+
+	}
+
+	@include media-breakpoint-down(sm) {
+		&::before {
+			height: 0;
+		}
+	}
+
+	@include media-breakpoint-only(sm) {
+		padding: 40px 20px;
+	}
+
+	@include media-breakpoint-down(xxl) {
+		h3 {
+			font-size: 27px;
+		}
+	}
+
+	span {
+		margin-bottom: 35px;
+	}
+
+	a {
+		margin-top: 30px;
+		display: block;
+		font-weight: 700;
+		color: $black;
+		@include opacity(0);
+	}
+
+	&:hover {
+		transform: translateY(-5px);
+		border-top: 2px solid $black;
+		background-color: $primary;
+
+		&::before {
+			@include opacity(0);
+		}
+
+		a {
+			@include opacity(1);
+		}
+	}
+}
+
+
+.feature-wrap {
+	min-height: 340px;
+}
+
+.feature-entry2 {
+	padding: 30px;
+	@include transition();
+	background-color: $mute;
+	position: relative;
+	cursor: pointer;
+
+	@include media-breakpoint-down(lg) {
+		max-width: 350px;
+		margin: 0 auto 30px;
+	}
+
+	h3 {
+		font-size: 30px;
+
+		@include media-breakpoint-only(xl) {
+			font-size: 26px;
+		}
+
+	}
+
+	@include media-breakpoint-between(lg, xl) {
+		padding: 30px 15px;
+
+		h3 {
+			font-size: 24px;
+		}
+	}
+@include media-breakpoint-only(sm) {
+	padding: 20px;
+	h3{
+		font-size: 26px;
+	}
+}
+	.icon-sm {
+		background-repeat: no-repeat;
+		background-position: center center;
+		@include transition();
+	}
+
+	.btn {
+		@include opacity(0);
+		visibility: hidden;
+		@include transition();
+		position: absolute;
+		padding: 12px;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 200px;
+		border-radius: 0;
+		border-top-left-radius: 8px;
+		border-top-right-radius: 8px;
+	}
+
+	.icon-soccer {
+		background-image: url('../images/icons/soccer.svg');
+	}
+
+	.icon-glove {
+		background-image: url('../images/icons/glove.png');
+	}
+
+	.icon-jersy {
+		background-image: url('../images/icons/jersy.png');
+	}
+
+	.icon-shoe {
+		background-image: url('../images/icons/shoe.png');
+	}
+
+
+	&:hover {
+		padding-bottom: 60px;
+
+		.icon {
+			background-color: $sky;
+
+			svg {
+				color: $white;
+			}
+		}
+	}
+
+	&:hover {
+		.btn {
+			@include opacity(1);
+			visibility: visible;
+		}
+
+		.icon-soccer {
+			background-image: url('../images/icons/soccer-w.png');
+		}
+
+		.icon-jersy {
+			background-image: url('../images/icons/jersy-w.png');
+		}
+
+		.icon-glove {
+			background-image: url('../images/icons/glove-w.png');
+		}
+
+		.icon-shoe {
+			background-image: url('../images/icons/shoe-w.png');
+		}
+	}
+}
+
+.feature-sec3 {
+	.feature-txt {
+		max-width: 550px;
+		@include media-breakpoint-only(md) {
+			margin-bottom: 60px;
+		}
+		ul {
+			@include list-clear;
+			margin: 35px 0 50px;
+
+			li {
+				padding-left: 30px;
+				margin-bottom: 15px;
+				@extend .overly;
+				vertical-align: middle;
+
+				&::before {
+					content: "\f12e";
+					font-family: "feather-icons";
+					background-color: $tertiary;
+					width: 20px;
+					height: 20px;
+					line-height: 20px;
+					font-size: 15px;
+					color: $white;
+					text-align: center;
+					top: 2px;
+					@include border-radius(50%)
+				}
+			}
+		}
+	}
+}
+
+.top-feature {
+	margin: 70px 0;
+
+	.feature-media {
+		position: relative;
+		margin-top: -180px;
+		animation: updown 4s ease-out infinite;
+		&.media-bottom {
+			top: 230px;
+		}
+	}
+}

@@ -1,0 +1,66 @@
+/*=================================
+Brand Style
+*/
+.brand-sec {
+	padding: 80px 0;
+
+	.swiper-slide {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+	}
+}
+
+.single-brand {
+	display: block;
+	width: 250px;
+	height: 150px;
+	text-align: center;
+	line-height: 148px;
+	@extend .overly;
+
+	&::before {
+		background-color: $black;
+		height: 50%;
+		top: auto;
+		bottom: 0;
+		@include opacity(0);
+		@include transition();
+	}
+	a {
+		img {
+			-webkit-transition: all 1.5s cubic-bezier(0, 0, 0.05, 1);
+			transition: all 1.5s cubic-bezier(0, 0, 0.05, 1);
+
+		}
+	}
+
+	img.hover-img {
+		@include position(center);
+		z-index: 2;
+		opacity: 0;
+		visibility: hidden;
+		@include transition();
+	}
+
+	&:hover {
+		&::before {
+			@include opacity(1);
+			height: 100%;
+		}
+
+		a img.hover-img {
+
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+
+}
+.brand2-sec{
+	padding: 80px 0;
+	.single-brand:hover::before{
+		opacity: 0;
+	}
+}

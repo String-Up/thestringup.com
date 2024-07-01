@@ -1,0 +1,305 @@
+/*=================================
+Banner Style
+*/
+.banner-txt {
+	h1 {
+		font-size: 110px;
+		line-height: 1.1;
+
+		@include media-breakpoint-down(xxl) {
+			font-size: 85px;
+		}
+
+		@include media-breakpoint-down(lg) {
+			font-size: 65px;
+		}
+
+		@include media-breakpoint-down(sm) {
+			font-size: 54px;
+		}
+	}
+}
+
+.golf-banner {
+	padding: 200px 0 130px;
+
+	@include media-breakpoint-down(lg) {
+		padding: 150px 0 100px;
+	}
+}
+
+.golfer-img {
+	position: absolute;
+	right: 0;
+	height: 100%;
+	top: 0;
+	width: 45%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center top;
+
+}
+
+.football-banner {
+	padding: 50px 0;
+	background-position: center center;
+
+	@include media-breakpoint-down(xxl) {
+		padding: 90px 0 100px;
+	}
+
+	@include media-breakpoint-down(lg) {
+		padding: 0px 0 100px;
+	}
+
+	.banner-txt {
+		.heading-box img {
+			float: left;
+			margin-right: 27px;
+
+			@include media-breakpoint-down(xl) {
+				margin-right: 15px;
+				width: 150px;
+			}
+
+			@include media-breakpoint-between(xl, xxl) {
+				width: 200px;
+			}
+		}
+
+		p {
+			max-width: 90%;
+		}
+
+		h1 {
+			font-size: 96px;
+			line-height: 1;
+
+			@include media-breakpoint-down(xl) {
+				font-size: 70px;
+			}
+
+			span {
+				color: $sky;
+			}
+
+			@include media-breakpoint-between(xl, xxl) {
+				font-size: 85px;
+			}
+		}
+
+		.btn {
+			@include media-breakpoint-down(xl) {
+				font-size: 16px;
+			}
+		}
+
+		a.btn.play-btn {
+			padding: 7px 30px 7px 7px;
+			border: 1px solid rgba(0, 0, 0, .1);
+			margin-left: 15px;
+
+			&:focus {
+				color: $body-color;
+			}
+		}
+
+		@include media-breakpoint-down(sm) {
+			.banner-cta a {
+				margin: 0 0 20px;
+
+				&.play-btn {
+					margin-left: 0;
+				}
+			}
+
+			.heading-box img {
+				width: auto;
+				float: none;
+			}
+
+			h1 {
+				font-size: 60px;
+				margin-top: 20px;
+			}
+		}
+	}
+
+	.football-media {
+		animation: updown 6.0s linear infinite;
+	}
+}
+
+.basketball-banner {
+	padding: 168px 0px 120px;
+	.banner-txt {
+		h1 {
+			line-height: 1.3;
+			font-size: 100px;
+			padding: 15px;
+			position: absolute;
+			top: 10px;
+			left: 10px;
+			line-height: 1.1;
+		}
+
+		p {
+			font-size: 24px;
+			margin: 30px 0 50px;
+			color: $white;
+			@include opacity(.6)
+		}
+
+		@include media-breakpoint-only(xl) {
+			h1 {
+				font-size: 90px;
+			}
+		}
+
+		@include media-breakpoint-only(md) {
+			h1 {
+				font-size: 74px;
+				top: 50px;
+			}
+
+			svg {
+				max-width: 100%;
+			}
+
+		}
+
+	}
+
+	@include media-breakpoint-only(sm) {
+		padding: 100px 0;
+
+		.banner-txt {
+			h1 {
+				font-size: 60px;
+			}
+		}
+	}
+
+	@include media-breakpoint-down(md) {
+		padding: 100px 0;
+
+		.banner-txt {
+			h1 {
+				font-size: 70px;
+				top: 55px;
+			}
+
+			svg {
+				max-width: 100%;
+			}
+
+			p {
+				margin-top: 0;
+			}
+		}
+	}
+
+	@include media-breakpoint-down(sm) {
+		padding: 100px 0;
+
+		.banner-txt {
+			h1 {
+				font-size: 45px;
+				top: 85px;
+			}
+
+			svg {
+				max-width: 100%;
+			}
+
+			p {
+				margin-top: 0;
+			}
+		}
+	}
+
+	@include media-breakpoint-down(lg) {
+		overflow: hidden;
+	}
+}
+
+.cricket-banner {
+	padding: 80px 0 300px;
+	@extend .overly;
+
+	&::before {
+		background: url('../images/batsman.png')no-repeat top left / contain;
+		width: 310px;
+		top: 10%;
+		animation: updown 6s ease-in infinite;
+	}
+
+	&::after {
+		position: absolute;
+		content: "";
+		right: 0;
+		top: 0;
+		width: 274px;
+		height: 100%;
+		background: url('../images/bowler.png')no-repeat top right / contain;
+		animation: updown 5.5s ease-in infinite;
+	}
+
+	h1 {
+		font-size: 100px;
+		margin-bottom: 45px;
+
+		@include media-breakpoint-only(xl) {
+			font-size: 90px;
+		}
+
+		@include media-breakpoint-only(lg) {
+			font-size: 80px;
+		}
+
+		@include media-breakpoint-only(md) {
+			font-size: 70px;
+		}
+
+	}
+
+	@include media-breakpoint-down(md) {
+		padding: 60px 0 240px;
+
+		h1 {
+			font-size: 52px;
+		}
+	}
+}
+
+.banner-gallery {
+	position: relative;
+	margin-top: -150px;
+	z-index: 2;
+
+	@include media-breakpoint-down(md) {
+		margin-top: -50px;
+	}
+
+	.col {
+		cursor: pointer;
+		@include transition();
+
+		&:hover {
+			transform: translateY(-10px);
+		}
+	}
+
+	.col:nth-child(2),
+	.col:nth-child(3) {
+		margin-top: -50px;
+
+		@include media-breakpoint-down(lg) {
+			margin-top: -15px;
+		}
+
+		@include media-breakpoint-down(sm) {
+			margin-top: -10px;
+		}
+	}
+}

@@ -1,0 +1,46 @@
+/*=================================
+Subscribe Style
+*/
+.subscribe-sec{
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.subs-card {
+	.line::before{
+		background-color: $white;
+	}
+	form {
+		position: relative;
+		margin-top: 50px;
+		.form-group {
+			width: 68%;
+			float: left;
+
+			input {
+				@include border-radius(30px);
+				background-color: rgba(255, 255, 255, .15);
+				border: 0 none;
+				color: $white;
+				padding-left: 45px;
+				&::placeholder{
+					color: $white;
+				}
+			}
+
+			i {
+				position: absolute;
+				left: 20px;
+				top: 20px;
+				color: $white;
+			}
+		}
+
+		button {
+			position: absolute;
+			right: 0;
+			top: 0;
+			padding: 15px 30px;
+		}
+	}
+}

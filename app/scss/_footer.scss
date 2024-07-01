@@ -1,0 +1,178 @@
+/*=================================
+Footer Style
+*/
+.footer {
+	padding: 130px 0 30px;
+
+	@include media-breakpoint-down(lg) {
+		padding: 100px 0 30px;
+		.footer-widget {
+			margin-bottom: 45px;
+		}
+	}
+
+	.copy-right {
+		padding: 0;
+		p {
+			@extend .text-mutes;
+			font-size: 16px;
+		}
+		border-top: 1px solid rgba(255, 255, 255, .15);
+	}
+
+	.instagram-widget {
+		padding-left: 100px;
+
+		@include media-breakpoint-between(lg, xxl) {
+			padding-left: 45px;
+		}
+
+		@include media-breakpoint-down(lg) {
+			padding: 0;
+		}
+	}
+}
+
+.footer-widget {
+
+	.widget-title {
+		margin-bottom: 30px;
+	}
+
+	ul {
+		@include list-clear;
+
+		li {
+			margin-bottom: 20px;
+			color: rgba(255, 255, 255, .6);
+
+			span {
+				width: 48px;
+				height: 48px;
+				background-color: rgba(255, 255, 255, .1);
+				text-align: center;
+				display: table;
+				margin-right: 10px;
+				@include border-radius(50%);
+				flex: 0 0 48px;
+				i {
+					color: $primary;
+					display: table-cell;
+					vertical-align: middle;
+				}
+			}
+
+			a {
+				color: rgba(255, 255, 255, .6);
+			}
+
+			&:hover a {
+				color: $white;
+			}
+		}
+	}
+
+	p {
+		color: rgba(255, 255, 255, .6);
+	}
+
+	&.touch-widget {
+		li span {
+			width: 40px;
+			height: 40px;
+			flex: 0 0 40px;
+		}
+
+		&.green {
+			li span {
+				background-color: $success;
+			}
+		}
+	}
+}
+
+.subs-form {
+	i {
+		@include position(vertical);
+		left: 15px;
+	}
+
+	input {
+		padding: 15px 20px 15px 40px;
+	}
+
+	.btn {
+		padding: 14px;
+	}
+}
+
+.footer2 {
+	.footer-widget {
+		li span {
+			background-color: $sky;
+			@include border-radius(5px);
+			margin-right: 20px;
+
+			i {
+				color: $white;
+			}
+		}
+	}
+}
+
+.instagrame-posts ul li {
+	display: inline-block;
+	width: 29%;
+	margin-bottom: 10px;
+	margin-right: 10px;
+	overflow: hidden;
+	@include border-radius(5px);
+
+	&:nth-child(3n + 3) {
+		margin-right: 0;
+	}
+
+}
+
+.footer2 {
+	.copy-right {
+		border-top: 1px solid rgba(255, 255, 255, .1);
+	}
+}
+
+.footer3 {
+	background-repeat: no-repeat;
+	background-position: center top;
+	padding-bottom: 20px;
+	@extend .overly;
+
+	&::before {
+		background: rgb(0, 0, 0);
+		background: linear-gradient(180deg, rgba(0, 0, 0, .9) 30%, rgba(0, 0, 0, 1) 100%);
+
+	}
+
+	.subs-form {
+		input {
+			background-color: rgba(255, 255, 255, .1);
+			border-color: rgba(255, 255, 255, .2);
+		}
+	}
+
+	.footer-widget ul {
+		margin-top: 30px;
+
+		li span {
+			background-color: transparent;
+			height: auto;
+			width: auto;
+			display: inline-block;
+			margin-right: 10px;
+		}
+	}
+
+	.copy-right {
+		border-top: 1px solid rgba(255, 255, 255, .15);
+
+	}
+}

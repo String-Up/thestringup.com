@@ -1,0 +1,41 @@
+/*=================================
+Bootstrap Cusotmization
+*/
+$body-color: #696969;
+$primary: #E0F465;
+$primary-dark: #B9D700;
+$success: #35CC6C;
+$sky: #16C7B4;
+$light: #F5F8E5;
+$secondary: $body-color;
+$mute: #f6f6f6;
+$black: #000;
+$altdark: #222;
+$yellow: #FFAC4B;
+$tertiary: #FE5900;
+$headings-color: #030523;
+$border-color: #E8E8E8;
+$white: #fff;
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "info": $white,
+  "light": $light,
+  "danger": #f30d0d,
+  "dark": $black,
+  "altdark": $altdark,
+  "sky": $sky,
+  "mute": $mute,
+  "tertiary": $tertiary,
+
+);
+// Custom.scss
+$box-shadow: 0px 15px 68px rgba(11, 3, 35, 0.15);
+$card-border-width: 0px;
+$breadcrumb-divider: quote("||");
+$btn-padding-y: 17px;
+$btn-padding-x: 32px;
+
+// Option A: Include all of Bootstrap
+@import "../../node_modules/bootstrap/scss/bootstrap";

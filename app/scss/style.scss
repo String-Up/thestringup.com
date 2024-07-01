@@ -1,0 +1,91 @@
+/*********************************************************************************
+
+	Template Name: Fuzio || Sports Club HTML Template
+	Description: A perfect Template For Sports and Club. It comes with nice and clean design.
+
+	Note: This is style css (Sass).
+
+**********************************************************************************/
+
+/**************************************************************
+
+	STYLESHEET INDEXING
+	| 
+	|___ Default Styles
+	|	|___ bs-custom
+	|	|___ mixins
+	|	|___ typography
+	|	|___ header
+	|	|___ footer
+	|	|___ swiper slider
+	|	|___ widget
+	|
+	|
+	|___Sections Styles
+	|	|___ banner
+	|	|___ feature
+	|	|___ product
+	|	|___ single-product
+	|	|___ testimonial
+	|	|___ brand
+	|	|___ blog
+	|	|___ gallery
+	|	|___ video
+	|	|___ match
+	|	|___ team
+	|	|___ contact
+	|	|___ subscribe
+	|	|___ faq
+	|	|___ about
+	|	|___ tab
+	|	|___ pricing
+	|	|___ event
+	|	|___ table
+	|	|___ cart
+	|	|___ checkout
+	|	|___ error
+
+	|___ END STYLESHEET INDEXING
+
+***************************************************************/
+ 
+ 
+ // IMPORT BASE
+ @import 'bs-custom';
+ @import 'mixins';
+ @import 'typography';
+ @import 'theme';
+
+// IMPORT  COMPONENT 
+
+ // IMPORT THE SECTIONS 
+ @import 'header';
+ @import 'footer';
+ @import 'swiper';
+ @import 'widget';
+
+ // IMPORT THE SECTIONS 
+ @import 'components/banner';
+ @import 'components/feature';
+ @import 'components/product';
+ @import 'components/single-product';
+ @import 'components/testimonial';
+ @import 'components/brand';
+ @import 'components/blog';
+ @import 'components/gallery';
+ @import 'components/video';
+ @import 'components/match';
+ @import 'components/team';
+ @import 'components/contact';
+ @import 'components/subscribe';
+ @import 'components/counter';
+ @import 'components/services';
+ @import 'components/faq';
+ @import 'components/about';
+ @import 'components/tab';
+ @import 'components/pricing';
+ @import 'components/event';
+ @import 'components/table';
+ @import 'components/cart';
+ @import 'components/checkout';
+ @import 'components/error';

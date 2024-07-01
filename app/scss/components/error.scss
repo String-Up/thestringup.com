@@ -1,0 +1,75 @@
+/*=================================
+404 Error Style
+*/
+.error-sec {
+	min-height: 100vh;
+	overflow: hidden;
+	@extend .overly;
+
+	&::before {
+		background: url('../images/error-footer.png')no-repeat left bottom;
+		left: -7%;
+		top: 7%;
+	}
+
+	&::after {
+		position: absolute;
+		right: -6%;
+		top: -15%;
+		content: "";
+		background-color: $primary;
+		@include border-radius(50%);
+		width: 252px;
+		height: 252px;
+
+	}
+	.error-txt{
+		padding: 200px 0;
+	}
+	h1.error-title {
+		font-size: 425px;
+		line-height: .5;
+
+		img {
+			position: relative;
+			top: -50px;
+			margin: 0 20px;
+		}
+
+	}
+
+	@include media-breakpoint-down(xl) {
+		&::before {
+			left: -25%;
+		}
+
+		h1.error-title {
+			font-size: 300px;
+
+			img {
+				width: 200px;
+			}
+		}
+	}
+	@include media-breakpoint-down(lg) {
+		&::after{
+			right: -12%
+		}
+	}
+
+	@include media-breakpoint-down(sm) {
+		&::before {
+			left: -55%;
+			top: 20%;
+		}
+
+		h1.error-title {
+			font-size: 200px;
+
+			img {
+				width: 140px;
+				top: -20px;
+			}
+		}
+	}
+}

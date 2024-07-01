@@ -1,0 +1,114 @@
+/*=================================
+Match Style
+*/
+.single-match {
+	padding: 40px;
+	cursor: pointer;
+	@include transition();
+
+	span.versus {
+		width: 48px;
+		height: 48px;
+		line-height: 48px;
+		border: 1px solid $border-color;
+		text-align: center;
+		margin: 0 40px;
+		@include border-radius(50%);
+		flex: 0 0 47px;
+		justify-content: center;
+	}
+
+@include media-breakpoint-down(lg) {
+	span.versus{
+		margin: 0 20px;
+	}
+	.team-logo{
+			max-width: 190px;
+				margin: 30px 0;
+	}
+	.btn{
+		padding: 10px 20px;
+	}
+}
+	&:hover {
+		@include box-shadow(0 0px 40px 10px rgba($black, .05));
+	}
+	@include media-breakpoint-down(xl) {
+		padding: 40px 20px;
+	}
+}
+
+.match-schedule {
+	overflow: hidden;
+	@extend .overly;
+
+	&::before {
+		width: 0;
+		height: 0;
+		background-color: transparent;
+		border-top: 100px solid $white;
+		border-right: 120px solid transparent;
+	}
+
+	&::after {
+		width: 0;
+		height: 0;
+		background-color: transparent;
+		border-top: 100px solid $white;
+		border-left: 120px solid transparent;
+		right: 0;
+		top: 0;
+		position: absolute;
+		content: "";
+	}
+
+	.line::before {
+		background-color: $white;
+	}
+
+	.container {
+		@extend .overly;
+
+		&::before,&::after {
+			width: 317px;
+			height: 250px;
+			background-color: rgba($white, .15);
+			top: 28%;
+			left: -5%;
+		}
+		&::after{
+			position: absolute;
+			left: auto;
+			right: -5%;
+			content: "";
+
+		}
+	}
+	.swiper{
+		padding-bottom: 80px;
+	}
+		 .swiper-pagination {
+			bottom: 0;
+			justify-content: center;
+			span.swiper-pagination-bullet{
+				margin: 0 7px;
+			}
+			 span.swiper-pagination-bullet-active{
+				width: 32px;
+				height: 32px;
+				border: 1px solid $white;
+				&::before{
+					background-color: $white;
+				}
+			}
+		}
+}
+.league-gallery {
+	img{
+		width: 49%;
+		@include media-breakpoint-down(md) {
+			width: 100%;
+			margin-bottom: 20px;
+		} 
+	}
+}
