@@ -1,0 +1,165 @@
+/* NoizeSport */
+@font-face {
+    font-family: 'NoizeSport';
+    src: url('../fonts/noize_sport/NoizeSportFreeVertion-Regular.ttf') format('truetype');  
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'BlackthornsDemoBlack';
+    src: url('../fonts/blackthorns/blackthorns-black - DEMO.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'BlackthornsDemoRegular';
+    src: url('../fonts/blackthorns/blackthorns-regular DEMO.ttf') format('truetype'),
+            url('../fonts/blackthorns/BlackthornScriptTypeface.ttf') format('truetype');
+    font-weight: 400;
+}
+
+body {
+    font-family: 'BlackthornsDemoRegular', Arial, sans-serif;
+}
+
+.golf-banner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    min-height: 100vh; /* Ensures it covers at least the full viewport height */
+    background: url('../images/stringup-video-banner.png') no-repeat center center; /* Fallback image */
+    background-size: cover;
+ }
+
+ .background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+ }
+
+ .container {
+    position: relative;
+    z-index: 1;
+    padding: 60px 15px; /* Adjust padding as needed */
+ }
+
+ /* .banner-txt {
+    width: 870px;
+ } */
+
+ .banner-txt .banner-btn {
+    font-family: 'BlackthornsDemoRegular';
+    font-size: 14px;
+    width: 120px;
+    height: 48px;
+    padding: 15px 24px 10px 24px;
+    border: rgba(236, 190, 70, 1) 1px solid;
+ }
+ .banner-txt .player-btn {
+    background: rgba(236, 190, 70, 1);
+    color: rgba(0, 0, 0, 1);
+ }
+ .banner-txt .academy-btn {
+    background: rgba(0, 0, 0, 1);
+    color: rgba(255, 255, 255, 1);
+    margin-left: 16px;
+ }
+h1.text-uppercase {
+    font-family: 'NoizeSport';
+    font-size: 40px;
+    line-height: 58px;
+    color: rgba(249, 247, 232, 1);
+}
+span.lead {
+    font-family: 'NoizeSport';
+    font-size: 24px;
+    line-height: 24px;
+    color: rgba(236, 190, 70, 1)
+}
+.login-btn {
+    background: rgba(40, 57, 115, 1);
+    color: rgba(255, 255, 255, 1) !important;
+}
+/* login-btn:hover {
+    background-color: rgba(40, 57, 115, 1);
+    color: rgba(255, 255, 255, 1) !important;
+} */
+.login-btn:active, .login-btn:focus, .login-btn:hover {
+    background: rgba(40, 57, 115, 1);
+    color: rgba(255, 255, 255, 1) !important;
+    opacity: 0.8;
+}
+.player-btn:active, .player-btn:focus, .player-btn:hover {
+    opacity: 0.8;
+}
+.academy-btn:active, .academy-btn:focus, .academy-btn:hover {
+    opacity: 0.8;
+}
+
+.footer-menu-section {
+    width: 12%;
+    margin-left: 100px;
+    margin-right: 70px;
+}
+
+.footer-quick-links-section {
+    width: 20%;
+}
+
+.footer-social-media-section {
+    position: relative;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    font-family: Inter;
+    font-size: 1.25rem;
+    line-height: 1;
+    border-radius: 4px;
+    overflow: hidden;
+    user-select: none;
+    color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+    margin: 4px 10px 0px 10px;
+}
+
+.player-section-card {
+    width: 300px;
+    height: 393px;
+    padding: 32px;
+    background: #ffffff;
+    box-shadow: 0px 2px 3.299999952316284px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+    overflow: hidden;
+    /* border-left: 3px solid; */
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+    display: inline-flex;
+}
+.feature-entry:hover {
+    border-top: 2px solid #ffffff;
+    background-color: #283973;
+    color: #ffffff !important;
+}
+.feature-entry h3 {
+    color: #283973; /* Default color */
+}
+
+.feature-entry:hover h3 {
+    color: #ffffff; /* Hover color */
+}
+/* .icon, .icon-sm {
+    height: 64px;
+    width: 64px;
+}  */

@@ -9,6 +9,12 @@
 	font-style: normal;
 }
 
+/* NoizeSport */
+@font-face {
+    font-family: 'NoizeSport';
+    src: url('fonts/noize_sport/NoizeSportFreeVertion-Regular.ttf') format('truetype');
+}
+
 .feather-icon {
 
 	font-family: "feather-icons";
