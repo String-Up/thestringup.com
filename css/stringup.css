@@ -100,7 +100,9 @@ span.lead {
 .academy-btn:active, .academy-btn:focus, .academy-btn:hover {
     opacity: 0.8;
 }
-
+.footer {
+    background: rgba(40, 57, 115, 1);
+}
 .footer-menu-section {
     width: 12%;
     margin-left: 100px;
@@ -110,7 +112,9 @@ span.lead {
 .footer-quick-links-section {
     width: 20%;
 }
-
+.footer-social-media-section-div {
+    margin-left: 35px;
+}
 .footer-social-media-section {
     position: relative;
     display: flex;
@@ -133,33 +137,300 @@ span.lead {
 }
 
 .player-section-card {
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
     height: 393px;
     padding: 32px;
     background: #ffffff;
-    box-shadow: 0px 2px 3.299999952316284px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 2px 3.3px rgba(0, 0, 0, 0.25);
     border-radius: 16px;
     overflow: hidden;
-    /* border-left: 3px solid; */
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     gap: 20px;
-    display: inline-flex;
+    display: flex;
+    transition: all .4s ease-in-out;
 }
+
 .feature-entry:hover {
     border-top: 2px solid #ffffff;
     background-color: #283973;
     color: #ffffff !important;
 }
+
 .feature-entry h3 {
     color: #283973; /* Default color */
+    transition: color 0.4s ease;
 }
 
 .feature-entry:hover h3 {
     color: #ffffff; /* Hover color */
 }
+
+.feature-entry p {
+    color: black; /* Default color */
+    transition: color 0.4s ease;
+}
+
+.feature-entry:hover p {
+    color: #ffffff; /* Hover color */
+}
+
+.icon img {
+    width: 40px;
+    height: 40px;
+}
+
+.player-section-app-card {
+    margin-top: 10px;
+    padding-left: 190px;
+    background: #F9F7E8;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 64px;
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+}
+
+.player-section-android-card, .player-section-apple-card {
+    padding: 28px 47px;
+    background: black;
+    border-radius: 12px;
+    border-bottom: 0.60px rgba(0, 0, 0, 0.20) solid;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 12px;
+    display: flex;
+    margin-bottom: 20px; /* Add space between rows on smaller screens */
+}
+
+.player-section-card-text {
+    width: 158px;
+    color: white;
+    font-size: 16px;
+    font-family: 'BlackthornsDemoRegular';
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0.04px;
+    word-wrap: break-word;
+}
+
+.player-section-android-card:hover, .player-section-apple-card:hover {
+    transform: translateY(-5px);
+    transition: all .4s ease-in-out;
+}
+
+.frame30 {
+    width: 100%;
+    max-width: 1920px;
+    position: relative;
+    background: white;
+    border: 1px solid;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    display: flex;
+    margin: 0 auto;
+}
+
+.group8 {
+    width: 100%;
+    position: relative;
+}
+
+.image8 {
+    width: 100%;
+    height: auto;
+}
+
+.scrim {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: rgba(64.42, 64.42, 64.42, 0.80); */
+    /* z-index: 1; */
+}
+
+.content-container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1260px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.academy {
+    font-family: 'NoizeSport';
+    width: 100%;
+    color: #F9F7E8;
+    font-size: 48px;
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 64px;
+    letter-spacing: 0.10px;
+    word-wrap: break-word;
+    margin-top: 20px;
+}
+
+.horizontal-inset {
+    /* padding-left: 16px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.divider {
+    width: 304px;
+    height: 1px;
+    background: #F06554;
+    margin: 0 auto;
+}
+
+.headline {
+    font-family: 'NoizeSport';
+    width: 100%;
+    color: #F9F7E8;
+    font-size: 40px;
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 64px;
+    letter-spacing: 0.10px;
+    word-wrap: break-word;
+    margin-bottom: 20px;
+}
+
+.group7 {
+    width: 100%;
+}
+
+.academy-card {
+    font-family: 'BlackthornsDemoRegular';
+    position: relative;
+    width: 100%;
+    height: 360px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px rgba(0, 0, 0, 0.48) solid;
+    z-index: 2;
+}
+
+.academy-card:hover {
+    transform: translateY(-5px);
+    transition: all .4s ease-in-out;
+}
+
+.base, .scrim {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.scrim {
+    background: #000000;
+    color: #ffffff;
+    position: relative;
+}
+
+.group4 {
+    text-align: left;
+    position: absolute;
+    left: 27px;
+    top: 11px;
+}
+
+/* .group4 .revenue-boost, .group4 .live-updates, .group4 .cost-savings, .group4 .marketing-and-promotion, .group4 .enhanced-player-experience, .group4 .customer-support, .group4 .time-savings {
+    width: 220px;
+    height: 52px;
+    color: white;
+    font-size: 20px;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 64px;
+    letter-spacing: 0.10px;
+    word-wrap: break-word;
+} */
+
+.group4 .academy-card-title {
+    font-family: 'BlackthornsDemoBlack';
+    width: 220px;
+    height: 52px;
+    color: white;
+    font-size: 20px;
+    font-weight: 900;
+    text-transform: uppercase;
+    /* line-height: 64px; */
+    letter-spacing: 0.10px;
+    word-wrap: break-word;
+}
+
+.group4 .description {
+    font-family: 'BlackthornsDemoRegular';
+    width: 305px;
+    height: auto;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 24px;
+    letter-spacing: 0.10px;
+    word-wrap: break-word;
+    margin-top: 160px;
+}
+
+
+@media (max-width: 1200px) {
+    .player-section-app-card {
+        padding-left: 20px; /* Adjust padding for smaller screens */
+        gap: 30px; /* Adjust gap for smaller screens */
+    }
+    .player-section-card {
+        width: calc(50% - 20px); /* Two cards per row */
+    }
+}
+
+@media (max-width: 992px) {
+    .player-section-app-card {
+        padding-left: 10px; /* Adjust padding for smaller screens */
+        gap: 20px; /* Adjust gap for smaller screens */
+        flex-direction: column; /* Stack cards vertically */
+    }
+    .player-section-card {
+        width: calc(50% - 20px); /* Two cards per row */
+    }
+}
+
+@media (max-width: 768px) {
+    .player-section-android-card, .player-section-apple-card {
+        padding: 20px; /* Adjust padding for smaller screens */
+        width: 100%; /* Make cards full width on small screens */
+    }
+    .player-section-card {
+        width: 100%; /* One card per row */
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .player-section-card-text {
+        font-size: 14px; /* Adjust font size for smaller screens */
+        width: auto; /* Adjust width for smaller screens */
+    }
+    .player-section-card {
+        padding: 20px;
+    }
+}
 /* .icon, .icon-sm {
     height: 64px;
     width: 64px;
 }  */
+
