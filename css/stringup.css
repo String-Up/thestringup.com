@@ -345,7 +345,7 @@ span.lead {
 }
 
 .scrim {
-    background: #000000;
+    background: rgba(0, 0, 0, 0.48); ;
     color: #ffffff;
     position: relative;
 }
@@ -397,9 +397,10 @@ span.lead {
     margin-right: 10px ;
 }
 
-.navbar-toggler {
+/* .navbar-toggler {
     margin-left: 50px;
-}
+} */
+
 
 @media (max-width: 1200px) {
     .player-section-app-card {
@@ -412,6 +413,9 @@ span.lead {
     .academy-card {
         width: 107%;
         margin: 5px;
+    }
+    a.navbar-brand {
+        width: 50%;
     }
 }
 
@@ -428,6 +432,9 @@ span.lead {
         width: 107%;
         margin: 5px;
     }
+    a.navbar-brand {
+        width: 50%;
+    }
 }
 
 @media (max-width: 768px) {
@@ -443,6 +450,9 @@ span.lead {
         width: 107%;
         margin: 5px;
     }
+    a.navbar-brand {
+        width: 50%;
+    }
 }
 
 @media (max-width: 576px) {
@@ -456,6 +466,9 @@ span.lead {
     .academy-card {
         width: 107%;
         margin: -3px;
+    }
+    a.navbar-brand {
+        width: 50%;
     }
 }
 /* .icon, .icon-sm {
