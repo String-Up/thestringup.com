@@ -184,14 +184,16 @@ span.lead {
 
 .player-section-app-card {
     margin-top: 10px;
-    padding-left: 190px;
+    /* padding-left: 190px; */
     background: #F9F7E8;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     gap: 64px;
     display: flex;
     flex-wrap: wrap; /* Allow items to wrap to the next line */
 }
+
+
 
 .player-section-android-card, .player-section-apple-card {
     padding: 28px 47px;
