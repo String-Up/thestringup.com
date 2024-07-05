@@ -19,6 +19,9 @@
 
 body {
     font-family: 'BlackthornsDemoRegular', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 .golf-banner {
@@ -138,7 +141,7 @@ span.lead {
 
 .player-section-card {
     width: 100%;
-    max-width: 300px;
+    /* max-width: 300px; */
     height: 393px;
     padding: 32px;
     background: #ffffff;
@@ -266,10 +269,14 @@ span.lead {
     text-align: center;
 }
 
+.gallery-sec {
+    background-color: #ffffff;
+}
+
 .academy {
     font-family: 'NoizeSport';
     width: 100%;
-    color: #F9F7E8;
+    color: #283973;
     font-size: 48px;
     font-weight: 400;
     text-transform: uppercase;
@@ -298,7 +305,7 @@ span.lead {
 .headline {
     font-family: 'NoizeSport';
     width: 100%;
-    color: #F9F7E8;
+    color: #283973;
     font-size: 40px;
     font-weight: 400;
     text-transform: uppercase;
@@ -320,7 +327,7 @@ span.lead {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
     overflow: hidden;
-    border: 1px rgba(0, 0, 0, 0.48) solid;
+    border: 2px #ECBE46 solid;
     z-index: 2;
 }
 
@@ -366,7 +373,7 @@ span.lead {
     font-family: 'BlackthornsDemoBlack';
     width: 220px;
     height: 52px;
-    color: white;
+    color: #ECBE46;
     font-size: 20px;
     font-weight: 900;
     text-transform: uppercase;
@@ -377,7 +384,7 @@ span.lead {
 
 .group4 .description {
     font-family: 'BlackthornsDemoRegular';
-    width: 305px;
+    /* width: 305px; */
     height: auto;
     color: white;
     font-size: 16px;
@@ -387,8 +394,12 @@ span.lead {
     letter-spacing: 0.10px;
     word-wrap: break-word;
     margin-top: 160px;
+    margin-right: 10px ;
 }
 
+.navbar-toggler {
+    margin-left: 50px;
+}
 
 @media (max-width: 1200px) {
     .player-section-app-card {
@@ -397,6 +408,10 @@ span.lead {
     }
     .player-section-card {
         width: calc(50% - 20px); /* Two cards per row */
+    }
+    .academy-card {
+        width: 107%;
+        margin: 5px;
     }
 }
 
@@ -409,16 +424,24 @@ span.lead {
     .player-section-card {
         width: calc(50% - 20px); /* Two cards per row */
     }
+    .academy-card {
+        width: 107%;
+        margin: 5px;
+    }
 }
 
 @media (max-width: 768px) {
     .player-section-android-card, .player-section-apple-card {
-        padding: 20px; /* Adjust padding for smaller screens */
+        padding: 8px; /* Adjust padding for smaller screens */
         width: 100%; /* Make cards full width on small screens */
     }
     .player-section-card {
         width: 100%; /* One card per row */
         margin-bottom: 20px;
+    }
+    .academy-card {
+        width: 107%;
+        margin: 5px;
     }
 }
 
@@ -429,6 +452,10 @@ span.lead {
     }
     .player-section-card {
         padding: 20px;
+    }
+    .academy-card {
+        width: 107%;
+        margin: -3px;
     }
 }
 /* .icon, .icon-sm {
