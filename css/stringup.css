@@ -1,24 +1,16 @@
-/* NoizeSport */
+/* InterRegular */
 @font-face {
-    font-family: 'NoizeSport';
-    src: url('../fonts/noize_sport/NoizeSportFreeVertion-Regular.ttf') format('truetype');  
-    font-weight: 400;
+    font-family: 'InterRegular';
+    src: url('../fonts/inter/Inter-Regular.otf') format('opentype');  
 }
 
 @font-face {
-    font-family: 'BlackthornsDemoBlack';
-    src: url('../fonts/blackthorns/blackthorns-black - DEMO.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'BlackthornsDemoRegular';
-    src: url('../fonts/blackthorns/blackthorns-regular DEMO.ttf') format('truetype'),
-            url('../fonts/blackthorns/BlackthornScriptTypeface.ttf') format('truetype');
-    font-weight: 400;
+    font-family: 'InterSemiBold';
+    src: url('../fonts/inter/Inter-SemiBold.otf') format('opentype');
 }
 
 body {
-    font-family: 'BlackthornsDemoRegular', Arial, sans-serif;
+    font-family: 'InterRegular', Arial, sans-serif;
     margin: 0;
     padding: 0;
     overflow-x: hidden; /* Prevent horizontal scrolling */
@@ -31,6 +23,15 @@ body {
     height: auto;
     min-height: 100vh; /* Ensures it covers at least the full viewport height */
     background: url('../images/stringup-video-banner.png') no-repeat center center; /* Fallback image */
+    background-size: cover;
+ }
+
+ .howitworks-banner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    min-height: 100vh; /* Ensures it covers at least the full viewport height */
     background-size: cover;
  }
 
@@ -56,7 +57,7 @@ body {
  } */
 
  .banner-txt .banner-btn {
-    font-family: 'BlackthornsDemoRegular';
+    font-family: 'InterRegular';
     font-size: 14px;
     width: 120px;
     height: 48px;
@@ -73,13 +74,13 @@ body {
     margin-left: 16px;
  }
 h1.text-uppercase {
-    font-family: 'NoizeSport';
+    font-family: 'InterRegular';
     font-size: 40px;
     line-height: 58px;
     color: rgba(249, 247, 232, 1);
 }
 span.lead {
-    font-family: 'NoizeSport';
+    font-family: 'InterRegular';
     font-size: 24px;
     line-height: 24px;
     color: rgba(236, 190, 70, 1)
@@ -214,7 +215,7 @@ span.lead {
     width: 158px;
     color: white;
     font-size: 16px;
-    font-family: 'BlackthornsDemoRegular';
+    font-family: 'InterRegular';
     font-weight: 400;
     line-height: 26px;
     letter-spacing: 0.04px;
@@ -274,7 +275,7 @@ span.lead {
 }
 
 .academy {
-    font-family: 'NoizeSport';
+    font-family: 'InterRegular';
     width: 100%;
     color: #283973;
     font-size: 48px;
@@ -303,7 +304,7 @@ span.lead {
 }
 
 .headline {
-    font-family: 'NoizeSport';
+    font-family: 'InterRegular';
     width: 100%;
     color: #283973;
     font-size: 40px;
@@ -320,7 +321,7 @@ span.lead {
 }
 
 .academy-card {
-    font-family: 'BlackthornsDemoRegular';
+    font-family: 'InterRegular';
     position: relative;
     width: 100%;
     height: 360px;
@@ -370,7 +371,7 @@ span.lead {
 } */
 
 .group4 .academy-card-title {
-    font-family: 'BlackthornsDemoBlack';
+    font-family: 'InterSemiBold';
     width: 220px;
     height: 52px;
     color: #ECBE46;
@@ -383,7 +384,7 @@ span.lead {
 }
 
 .group4 .description {
-    font-family: 'BlackthornsDemoRegular';
+    font-family: 'InterRegular';
     /* width: 305px; */
     height: auto;
     color: white;
@@ -400,6 +401,186 @@ span.lead {
 /* .navbar-toggler {
     margin-left: 50px;
 } */
+
+/**** About Us Page ******/
+
+.aboutus-container {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    position: relative;
+    background: white;
+    padding: 20px;
+  }
+  
+  .group {
+    margin-bottom: 40px;
+  }
+  
+  .group10 {
+    text-align: center;
+  }
+  
+  .aboutus-title {
+    font-size: 50px;
+    font-family: InterSemiBold, sans-serif;
+    font-weight: 600;
+    color: black;
+    line-height: 1.2;
+  }
+  
+  .line1 {
+    width: 100%;
+    max-width: 612px;
+    margin: 20px auto;
+    border: 2px #F06554 solid;
+  }
+  
+  .group22, .group20, .group21 {
+    max-width: 1260px;
+    margin: 0 auto;
+  }
+  
+  .welcome-text, .mission-text, .personalized-service-text, .hr-turnaround-text, .passion-for-excellence-text, .quality-materials-text, .team-text {
+    color: black;
+    font-size: 20px;
+    font-family: InterRegular, sans-serif;
+    font-weight: 400;
+    line-height: 1.4;
+    word-wrap: break-word;
+  }
+  
+  .our-mission, .what-sets-us-apart, .our-team-title {
+    font-size: 54px;
+    font-family: InterSemiBold, sans-serif;
+    font-weight: 600;
+    color: black;
+    text-align: center;
+    margin: 40px 0;
+  }
+  
+  .personalized-service, .hr-turnaround, .passion-for-excellence, .quality-materials {
+    font-size: 32px;
+    font-family: InterSemiBold, sans-serif;
+    font-weight: 600;
+    color: black;
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  .contactus-card:hover {
+    background-color: #283973;
+    /* color: #ffffff !important; */
+  }
+
+  .contactus-card:hover h3, .contactus-card:hover a {
+    color: #ffffff; /* Hover color */
+}
+.contactus-card:hover p {
+    color: #ffffff; /* Hover color */
+}
+.contactus-card .icon, .contactus-card .icon-sm {
+    background-color: #283973;
+}
+.contact-card .icon-sm i, .contactus-card .icon i {
+    color: #ffffff;
+}
+
+.contactus-card .icon-sm i:hover, .contactus-card .icon i:hover {
+    color: #283973;
+}
+.sec-title.line-left:before, .sec-title.line:before {
+    background-color: #F06554;
+    width: 25%;
+}
+.sec-title {
+    font-family: InterSemiBold, sans-serif;
+}
+
+.icon-calendar, .icon-map-pin {
+    color: #F06554;
+}
+.text-uppercase-bold {
+    font-family: InterSemiBold, sans-serif; 
+}
+  
+  /* Responsive Styles */
+  @media (max-width: 1200px) {
+    .aboutus-title {
+      font-size: 64px;
+    }
+    .our-mission, .what-sets-us-apart, .our-team-title {
+      font-size: 44px;
+    }
+    .personalized-service, .hr-turnaround, .passion-for-excellence, .quality-materials {
+      font-size: 28px;
+    }
+    .welcome-text, .mission-text, .personalized-service-text, .hr-turnaround-text, .passion-for-excellence-text, .quality-materials-text, .team-text {
+      font-size: 18px;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .aboutus-title {
+      font-size: 54px;
+    }
+    .our-mission, .what-sets-us-apart, .our-team-title {
+      font-size: 36px;
+    }
+    .personalized-service, .hr-turnaround, .passion-for-excellence, .quality-materials {
+      font-size: 24px;
+    }
+    .welcome-text, .mission-text, .personalized-service-text, .hr-turnaround-text, .passion-for-excellence-text, .quality-materials-text, .team-text {
+      font-size: 16px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .aboutus-title {
+      font-size: 48px;
+    }
+    .our-mission, .what-sets-us-apart, .our-team-title {
+      font-size: 32px;
+    }
+    .personalized-service, .hr-turnaround, .passion-for-excellence, .quality-materials {
+      font-size: 22px;
+    }
+    .welcome-text, .mission-text, .personalized-service-text, .hr-turnaround-text, .passion-for-excellence-text, .quality-materials-text, .team-text {
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .aboutus-title {
+      font-size: 36px;
+    }
+    .our-mission, .what-sets-us-apart, .our-team-title {
+      font-size: 28px;
+    }
+    .personalized-service, .hr-turnaround, .passion-for-excellence, .quality-materials {
+      font-size: 20px;
+    }
+    .welcome-text, .mission-text, .personalized-service-text, .hr-turnaround-text, .passion-for-excellence-text, .quality-materials-text, .team-text {
+      font-size: 12px;
+    }
+  }
+  
+  /* Media Queries for responsiveness */
+  @media (max-width: 768px) {
+    .aboutus-header-title {
+      font-size: 8vw;
+    }
+    .aboutus-mission-title, .aboutus-value-title, .aboutus-service-title, .aboutus-team-title, .aboutus-team-subtitle {
+      font-size: 5vw;
+    }
+    .aboutus-mission-text, .aboutus-value-text, .aboutus-service-text, .aboutus-team-content, .aboutus-section-text {
+      font-size: 1.5rem;
+    }
+    .aboutus-section-title {
+      font-size: 7vw;
+    }
+  }
+  
 
 
 @media (max-width: 1200px) {

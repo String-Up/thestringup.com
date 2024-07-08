@@ -56,7 +56,7 @@
             <!-- Nav CTA End -->
             <div class="collapse navbar-collapse oder-lg-2" id="navbarSupportedContent">
                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                  <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                  <li class="nav-item"><a class="nav-link" href="howitworks.html">How It Works</a></li>
                   <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
                   <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
                   <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
@@ -69,64 +69,18 @@
    <!-- Header End -->
 
    <!-- Events Section Start -->
-   <section class="match-section sec-padding">
+   <section class="match-section sec-padding" style="margin-top: -115px;">
       <div class="container">
          <div class="row">
             <div class="col-lg-6 mx-auto text-center">
-               <h2 class="sec-title line">Upcoming Events</h2>
+               <h2 class="sec-title line">Events</h2>
                <p>Provide a comprehensive directory of golf courses, including details such as location, course layout,
                   facilities, and
                   user reviews.</p>
             </div>
          </div>
-         <div class="row mt-5">
-            <div class="col-lg-12">
-               <div class="single-match d-md-flex border rounded-4 justify-content-between align-items-center mb-4">
-                  <div class="match-info">
-                     <p><i class="feather-icon icon-calendar me-2"></i>13 Sep, 2023</p>
-                     <h3 class="text-uppercase">Donate to Elevate Impact</h3>
-                     <p><i class="feather-icon icon-map-pin me-2"></i>Willowbrook Park - Greenwood</p>
-                  </div>
-                  <div class="team-logo d-flex justify-content-between align-items-center">
-                     <a href="#"><img class="img-fluid" src="images/team1.png" alt=""></a>
-                     <span class="versus">VS</span>
-                     <a href="#"><img class="img-fluid" src="images/team2.png" alt=""></a>
-                  </div>
-                  <div class="match-ticket">
-                     <a href="#" class="btn btn-dark">Get Ticket</a>
-                  </div>
-               </div> <!-- Single Match End -->
-               <div class="single-match d-md-flex border rounded-4 justify-content-between align-items-center mb-4">
-                  <div class="match-info">
-                     <p><i class="feather-icon icon-calendar me-2"></i>13 Sep, 2023</p>
-                     <h3 class="text-uppercase">Donate to Elevate Impact</h3>
-                     <p><i class="feather-icon icon-map-pin me-2"></i>Willowbrook Park - Greenwood</p>
-                  </div>
-                  <div class="team-logo d-flex justify-content-between align-items-center">
-                     <a href="#"><img class="img-fluid" src="images/team3.png" alt=""></a>
-                     <span class="versus">VS</span>
-                     <a href="#"><img class="img-fluid" src="images/team4.png" alt=""></a>
-                  </div>
-                  <div class="match-ticket">
-                     <a href="#" class="btn btn-dark">Get Ticket</a>
-                  </div>
-               </div> <!-- Single Match End -->
-               <div class="single-match d-md-flex border rounded-4 justify-content-between align-items-center">
-                  <div class="match-info">
-                     <p><i class="feather-icon icon-calendar me-2"></i>13 Sep, 2023</p>
-                     <h3 class="text-uppercase">Donate to Elevate Impact</h3>
-                     <p><i class="feather-icon icon-map-pin me-2"></i>Willowbrook Park - Greenwood</p>
-                  </div>
-                  <div class="team-logo d-flex justify-content-between align-items-center">
-                     <a href="#"><img class="img-fluid" src="images/team5.png" alt=""></a>
-                     <span class="versus">VS</span>
-                     <a href="#"><img class="img-fluid" src="images/team6.png" alt=""></a>
-                  </div>
-                  <div class="match-ticket">
-                     <a href="#" class="btn btn-dark">Get Ticket</a>
-                  </div>
-               </div> <!-- Single Match End -->
-            </div>
+         <div class="row mt-5" id="events-container">
+            <!-- Events will be injected here by JavaScript -->
          </div>
       </div>
    </section>
@@ -237,6 +191,52 @@
    <script src="js/purecounter_vanilla.js"></script>
 
    <script src="js/custom.js"></script>
+   <!-- Custom Script for Dynamic Events -->
+   <script>
+      document.addEventListener('DOMContentLoaded', function () {
+         const eventsData = [
+            {
+               "type": "Team & Individual",
+               "title": "Donate to Elevate Impact",
+               "date": "13 Sep, 2023 / 13 Sep, 2023",
+               "location": "Willowbrook Park - Greenwood",
+               "link": "#"
+            },
+            {
+               "type": "Team & Individual",
+               "title": "Support the Cause",
+               "date": "20 Oct, 2023 / 20 Oct, 2023",
+               "location": "Central Park - New York",
+               "link": "#"
+            },
+            {
+               "type": "Team & Individual",
+               "title": "Help the Community",
+               "date": "15 Nov, 2023 / 15 Nov, 2023",
+               "location": "Greenfield Stadium - Boston",
+               "link": "#"
+            }
+         ];
+
+         const eventsContainer = document.getElementById('events-container');
+         eventsData.forEach(event => {
+            const eventElement = document.createElement('div');
+            eventElement.className = 'single-match d-md-flex border rounded-4 justify-content-between align-items-center mb-4';
+            eventElement.innerHTML = `
+               <div class="match-info">
+                  <p>${event.type}</p>
+                  <h3 class="text-uppercase text-uppercase-bold">${event.title}</h3>
+                  <p><i class="feather-icon icon-calendar me-2"></i>${event.date}</p>
+                  <p><i class="feather-icon icon-map-pin me-2"></i>${event.location}</p>
+               </div>
+               <div class="match-ticket">
+                  <a href="${event.link}" class="btn btn-dark">More</a>
+               </div>
+            `;
+            eventsContainer.appendChild(eventElement);
+         });
+      });
+   </script>
 
 </body>
 
