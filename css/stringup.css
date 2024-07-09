@@ -651,6 +651,9 @@ span.lead {
     a.navbar-brand {
         width: 50%;
     }
+    .howitworks-banner {
+        min-height: 0vh;
+    }
 }
 /* .icon, .icon-sm {
     height: 64px;

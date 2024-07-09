@@ -81,6 +81,9 @@
          </div>
          <div class="row mt-5" id="events-container">
             <!-- Events will be injected here by JavaScript -->
+            <!-- <div class="team-logo d-flex justify-content-between align-items-center">
+               <a href="#"><img class="img-fluid" src=${event.logo} alt=""></a>
+            </div> -->
          </div>
       </div>
    </section>
@@ -192,51 +195,38 @@
 
    <script src="js/custom.js"></script>
    <!-- Custom Script for Dynamic Events -->
+   <!-- Custom Script for Dynamic Events -->
    <script>
       document.addEventListener('DOMContentLoaded', function () {
-         const eventsData = [
-            {
-               "type": "Team & Individual",
-               "title": "Donate to Elevate Impact",
-               "date": "13 Sep, 2023 / 13 Sep, 2023",
-               "location": "Willowbrook Park - Greenwood",
-               "link": "#"
-            },
-            {
-               "type": "Team & Individual",
-               "title": "Support the Cause",
-               "date": "20 Oct, 2023 / 20 Oct, 2023",
-               "location": "Central Park - New York",
-               "link": "#"
-            },
-            {
-               "type": "Team & Individual",
-               "title": "Help the Community",
-               "date": "15 Nov, 2023 / 15 Nov, 2023",
-               "location": "Greenfield Stadium - Boston",
-               "link": "#"
-            }
-         ];
-
-         const eventsContainer = document.getElementById('events-container');
-         eventsData.forEach(event => {
-            const eventElement = document.createElement('div');
-            eventElement.className = 'single-match d-md-flex border rounded-4 justify-content-between align-items-center mb-4';
-            eventElement.innerHTML = `
-               <div class="match-info">
-                  <p>${event.type}</p>
-                  <h3 class="text-uppercase text-uppercase-bold">${event.title}</h3>
-                  <p><i class="feather-icon icon-calendar me-2"></i>${event.date}</p>
-                  <p><i class="feather-icon icon-map-pin me-2"></i>${event.location}</p>
-               </div>
-               <div class="match-ticket">
-                  <a href="${event.link}" class="btn btn-dark">More</a>
-               </div>
-            `;
-            eventsContainer.appendChild(eventElement);
-         });
+          fetch('eventsData.json')
+          .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok ' + response.statusText);
+                    }
+                    return response.json();
+                })
+              .then(eventsData => {
+                  const eventsContainer = document.getElementById('events-container');
+                  eventsData.forEach(event => {
+                      const eventElement = document.createElement('div');
+                      eventElement.className = 'single-match d-md-flex border rounded-4 justify-content-between align-items-center mb-4';
+                      eventElement.innerHTML = `
+                          <div class="match-info">
+                              <p>${event.category}</p>
+                              <h3 class="text-uppercase text-uppercase-bold">${event.title}</h3>
+                              <p><i class="feather-icon icon-calendar me-2"></i>${event.date}</p>
+                              <p><i class="feather-icon icon-map-pin me-2"></i>${event.location}</p>
+                          </div>
+                          
+                          <div class="match-ticket">
+                              <a href="${event.link}" class="btn btn-dark">More</a>
+                          </div>
+                      `;
+                      eventsContainer.appendChild(eventElement);
+                  });
+              });
       });
-   </script>
+  </script>
 
 </body>
 
