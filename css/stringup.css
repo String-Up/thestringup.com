@@ -10,12 +10,22 @@
 }
 
 body {
-    font-family: 'InterRegular', Arial, sans-serif;
+    font-family: 'InterRegular';
     margin: 0;
     padding: 0;
     overflow-x: hidden; /* Prevent horizontal scrolling */
+    background-color: #F9F7E8;
 }
-
+.preloader span {
+    background: #283973;
+}
+.header {
+    line-height: 0px;
+    background-color: #FFFFFF;
+}
+.tc-pp-text{
+    color: #000000;
+}
 .golf-banner {
     position: relative;
     overflow: hidden;
@@ -61,7 +71,7 @@ body {
     font-size: 14px;
     width: 120px;
     height: 48px;
-    padding: 15px 24px 10px 24px;
+    padding: 14px 24px 14px 24px;
     border: rgba(236, 190, 70, 1) 1px solid;
  }
  .banner-txt .player-btn {
@@ -106,6 +116,7 @@ span.lead {
 }
 .footer {
     background: rgba(40, 57, 115, 1);
+    padding: 0px 0px 0px 0px;
 }
 .footer-menu-section {
     width: 12%;
@@ -138,6 +149,9 @@ span.lead {
     color: rgb(255, 255, 255);
     background-color: rgb(255, 255, 255);
     margin: 4px 10px 0px 10px;
+}
+.footer-widget ul li, .footer-widget ul li a {
+    color: #ffffff !important;
 }
 
 .player-section-card {
@@ -186,6 +200,12 @@ span.lead {
     height: 40px;
 }
 
+#player-section {
+    padding: 25px 20px;
+}
+#academy-section {
+    padding: 25px 20px;
+}
 .player-section-app-card {
     margin-top: 10px;
     /* padding-left: 190px; */
@@ -468,25 +488,27 @@ span.lead {
     margin: 20px 0;
   }
 
+  .contactus-card {
+    height: 325px;
+  }
+
+  .contactus-card .icon, .contactus-card .icon-sm {
+    background-color: #283973;
+    color: #ffffff;
+  }
+  .contact-card .icon-sm i, .contactus-card .icon i {
+    color: #ffffff;
+}
+
   .contactus-card:hover {
     background-color: #283973;
     /* color: #ffffff !important; */
   }
 
-  .contactus-card:hover h3, .contactus-card:hover a {
+  .contactus-card:hover h3, .contactus-card:hover a, .contactus-card:hover p {
     color: #ffffff; /* Hover color */
 }
-.contactus-card:hover p {
-    color: #ffffff; /* Hover color */
-}
-.contactus-card .icon, .contactus-card .icon-sm {
-    background-color: #283973;
-}
-.contact-card .icon-sm i, .contactus-card .icon i {
-    color: #ffffff;
-}
-
-.contactus-card .icon-sm i:hover, .contactus-card .icon i:hover {
+.contactus-card:hover i {
     color: #283973;
 }
 .sec-title.line-left:before, .sec-title.line:before {
@@ -503,7 +525,15 @@ span.lead {
 .text-uppercase-bold {
     font-family: InterSemiBold, sans-serif; 
 }
-  
+.single-match {
+    background-color: #ffffff;
+}
+.about-tab .nav-tabs li .nav-link.active:before, .about-tab .nav-tabs li .nav-link:focus:before {
+    background-color: #F06554;      
+}
+/* .about-tab .nav-tabs li .nav-link {
+    font-family: InterSemiBold;
+} */
   /* Responsive Styles */
   @media (max-width: 1200px) {
     .aboutus-title {

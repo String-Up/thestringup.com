@@ -8,14 +8,6 @@
         "logo": "images/events_default_logo.png"
     },
     {
-        "category": "Grade 1 - Individual Tournaments",
-        "title": "Paris 2024 Olympic Games Badminton Competition",
-        "date": "2024-07-27 / 2024-08-05",
-        "location": "Paris",
-        "link": "https://olympics.com/en/paris-2024/sports/badminton",
-        "logo": "images/events_default_logo.png"
-    },
-    {
         "category": "Qualifying",
         "title": "Yonex- Sunrise All India Junior Ranking Badminton Tournament (U-19 Years) (Selection Tournament)",
         "date": "2024-08-01 / 2024-08-07",
@@ -40,10 +32,10 @@
         "logo": "images/events_default_logo.png"
     },
     {
-        "category": "",
+        "category": "-",
         "title": "State Championships",
         "date": "2024-08-19 / 2024-08-30",
-        "location": "",
+        "location": "-",
         "link": "https://www.badmintonindia.org/",
         "logo": "images/events_default_logo.png"
     },
@@ -56,35 +48,11 @@
         "logo": "images/events_default_logo.png"
     },
     {
-        "category": "-",
-        "title": "Badminton Asia U17 & U15 Junior Badminton Championships 2024",
-        "date": "2024-08-20 / 2024-08-25",
-        "location": "Chengdu",
-        "link": "https://badmintonasia.org/calendar/badminton-asia-u17-u15-junior-championships-2024/",
-        "logo": "images/events_default_logo.png"
-    },
-    {
-        "category": "HSBC BWF World Tour Super 750",
-        "title": "DAIHATSU Japan Open 2024",
-        "date": "2024-08-20 / 2024-08-25",
-        "location": "Tokyo",
-        "link": "https://bwfworldtour.bwfbadminton.com/tournament/4753/daihatsu-japan-open-2024/overview",
-        "logo": "images/events_default_logo.png"
-    },
-    {
         "category": "Junior International Series",
         "title": "KOTAK India Junior International Series 2024",
         "date": "2024-08-20 / 2024-08-25",
         "location": "Hyderabad",
         "link": "https://badmintonasia.org/calendar/kotak-india-junior-international-series-2024/",
-        "logo": "images/events_default_logo.png"
-    },
-    {
-        "category": "BWF Tour Super 100",
-        "title": "Korea Open 2024",
-        "date": "2024-08-27 / 2024-09-01",
-        "location": "TBC",
-        "link": "https://bwfworldtour.bwfbadminton.com/tournament/4754/korea-open-2024/overview",
         "logo": "images/events_default_logo.png"
     },
     {
@@ -96,19 +64,11 @@
         "logo": "images/events_default_logo.png"
     },
     {
-        "category": "",
+        "category": "-",
         "title": "Inter State Zonal Championships",
         "date": "2024-09-02 / 2024-09-15",
-        "location": "",
+        "location": "-",
         "link": "https://www.badmintonindia.org/",
-        "logo": "images/events_default_logo.png"
-    },
-    {
-        "category": "HSBC BWF World Tour Super 300",
-        "title": "Taipei Open 2024",
-        "date": "2024-09-03 / 2024-09-08",
-        "location": "Taipei",
-        "link": "https://bwfworldtour.bwfbadminton.com/tournament/4755/yonex-taipei-open-2024/overview",
         "logo": "images/events_default_logo.png"
     },
     {
@@ -120,35 +80,11 @@
         "logo": "images/events_default_logo.png"
     },
     {
-        "category": "HSBC BWF World Tour Super 500",
-        "title": "Hong Kong Open 2024",
-        "date": "2024-09-10 / 2024-09-15",
-        "location": "Hong Kong",
-        "link": "https://bwfworldtour.bwfbadminton.com/tournament/4756/li-ning-hong-kong-open-2024/overview",
-        "logo": "images/events_default_logo.png"
-    },
-    {
-        "category": "BWF Tour Super 100",
-        "title": "Vietnam Open 2024",
-        "date": "2024-09-10 / 2024-09-15",
-        "location": "Ho Chi Minh City",
-        "link": "https://bwfbadminton.com/events/4875/yonex-sunrise-vietnam-open-2024/",
-        "logo": "images/events_default_logo.png"
-    },
-    {
         "category": "Qualifying",
         "title": "Yonex-Sunrise All India Sub Junior Ranking Badminton Tournament (U-13 Years)",
         "date": "2024-09-16 / 2024-09-21",
         "location": "Kolkata",
         "link": "https://www.badmintonindia.org/",
-        "logo": "images/events_default_logo.png"
-    },
-    {
-        "category": "HSBC BWF World Tour Super 1000",
-        "title": "China Open 2024",
-        "date": "2024-09-17 / 2024-09-22",
-        "location": "Changzhou",
-        "link": "https://bwfworldtour.bwfbadminton.com/tournament/4757/victor-china-open-2024/overview",
         "logo": "images/events_default_logo.png"
     },
     {
@@ -160,10 +96,154 @@
         "logo": "images/events_default_logo.png"
     },
     {
-        "category": "BWF Tour Super 100",
-        "title": "Indonesia Super 100 II 2024",
-        "date": "2024-09-24 / 2024-09-29",
+        "category": "Qualifying",
+        "title": "Yonex- Sunrise All India Sub Junior Ranking Badminton Tournament (U-15 & U-17 Years)",
+        "date": "2024-10-01 / 2024-10-08",
+        "location": "Vijayawada",
+        "link": "https://www.badmintonindia.org/",
+        "logo": "images/events_default_logo.png"
+    },
+    {
+        "category": "Qualifying",
+        "title": "Yonex-Sunrise All India Sub Junior Ranking Badminton Tournament (U-13 Years)",
+        "date": "2024-10-14 / 2024-10-19",
+        "location": "Raipur",
+        "link": "https://www.badmintonindia.org/",
+        "logo": "images/events_default_logo.png"
+    },
+    {
+        "category": "Qualifying",
+        "title": "Yonex- Sunrise All India Senior Ranking Badminton Tournament (Men & Women)",
+        "date": "2024-10-15 / 2024-10-21",
         "location": "TBC",
+        "link": "https://www.badmintonindia.org/",
+        "logo": "images/events_default_logo.png"
+    },
+    {
+        "category": "Qualifying",
+        "title": "Yonex-Sunrise All India Sub Junior Ranking Badminton Tournament (U-13 Years)",
+        "date": "2024-10-22 / 2024-10-27",
+        "location": "Dibrugarh",
+        "link": "https://www.badmintonindia.org/",
+        "logo": "images/events_default_logo.png"
+    },
+    {
+        "category": "Qualifying",
+        "title": "Yonex- Sunrise All India Sub Junior Ranking Badminton Tournament (U-15 & U-17 Years)",
+        "date": "2024-11-04 / 2024-11-10",
+        "location": "TBC",
+        "link": "https://www.badmintonindia.org/",
+        "logo": "images/events_default_logo.png"
+    },
+    {
+        "category": "Team & Individual",
+        "title": "Yonex- Sunrise 46th Junior National Badminton Championships (U-19 Years)",
+        "date": "2024-11-11 / 2024-11-17",
+        "location": "TBC",
+        "link": "https://www.badmintonindia.org/",
+        "logo": "images/events_default_logo.png"
+    },
+    {
+        "category": "International Challenge",
+        "title": "INFOSYS FOUNDATION India International Challenge 2024",
+        "date": "2024-11-05 / 2024-11-10",
+        "location": "TBC",
+        "link": "https://bwfbadminton.com/results/4837/infosys-foundation-india-international-challenge-2023",
+        "logo": "images/events_default_logo.png"
+    },
+    {
+        "category": "International Challenge",
+        "title": "CM Trophy India International Challenge 2024",
+        "date": "2024-11-12 / 2024-11-17",
+        "location": "Raipur",
+        "link": "https://www.badmintonindia.org/",
+        "logo": "images/events_default_logo.png"
+    },
+    {
+        "category": "-",
+        "title": "Khelo India Assessment Camp",
+        "date": "2024-11-19 / 2024-11-21",
+        "location": "-",
+        "link": "https://www.badmintonindia.org/",
+        "logo": "images/events_default_logo.png"
+    },
+    {
+        "category": "HSBC BWF World Tour Super 300",
+        "title": "Syed Modi India International 2024",
+        "date": "2024-11-26 / 2024-12-01",
+        "location": "Lucknow",
+        "link": "https://bwfworldtour.bwfbadminton.com/tournament/4767/syed-modi-india-international-2024/overview",
+        "logo": "images/events_default_logo.png"
+    },
+    {
+        "category": "-",
+        "title": "Yonex- Sunrise Mini National Badminton Championships (11 Years)",
+        "date": "2024-11-21 / 2024-11-24",
+        "location": "TBC",
+        "link": "https://www.badmintonindia.org/",
+        "logo": "images/events_default_logo.png"
+    },
+    {
+        "category": "-",
+        "title": "Yonex- Sunrise Sub Junior National Badminton Championships (13 Years)",
+        "date": "2024-11-27 / 2024-11-30",
+        "location": "TBC",
+        "link": "https://www.badmintonindia.org/",
+        "logo": "images/events_default_logo.png"
+    },
+    {
+        "category": "BWF Tour Super 100",
+        "title": "India Super 100 I 2024",
+        "date": "2024-12-03 / 2024-12-08",
+        "location": "TBC",
+        "link": "https://www.badmintonindia.org/",
+        "logo": "images/events_default_logo.png"
+    },
+    {
+        "category": "BWF Tour Super 100",
+        "title": "India Super 100 II 2024",
+        "date": "2024-12-10 / 2024-12-15",
+        "location": "TBC",
+        "link": "https://www.badmintonindia.org/",
+        "logo": "images/events_default_logo.png"
+    },
+    {
+        "category": "Team & Individual",
+        "title": "Yonex-Sunrise 86th Senior National Badminton Championships (Men & Women)",
+        "date": "2024-12-16 / 2024-12-22",
+        "location": "Bangalore",
+        "link": "https://www.badmintonindia.org/",
+        "logo": "images/events_default_logo.png"
+    },
+    {
+        "category": "Qualifying",
+        "title": "Yonex- Sunrise All India Junior Ranking Badminton Tournament (U-19 Years)",
+        "date": "2025-01-03 / 2025-01-09",
+        "location": "Hyderabad",
+        "link": "https://www.badmintonindia.org/",
+        "logo": "images/events_default_logo.png"
+    },
+    {
+        "category": "Qualifying",
+        "title": "Yonex-Sunrise All India Senior Ranking Badminton Tournament (Men & Women)",
+        "date": "2025-01-17 / 2025-01-23",
+        "location": "TBC",
+        "link": "https://www.badmintonindia.org/",
+        "logo": "images/events_default_logo.png"
+    },
+    {
+        "category": "All age categories",
+        "title": "Yonex- Sunrise All India Masters Ranking Badminton Tournaments (All age categories)",
+        "date": "2025-01-18 / 2025-01-24",
+        "location": "TBC",
+        "link": "https://www.badmintonindia.org/",
+        "logo": "images/events_default_logo.png"
+    },
+    {
+        "category": "All Age Categories",
+        "title": "Yonex-Sunrise 46th Indian Masters National Badminton Championships (All age categories)",
+        "date": "2025-03-16 / 2025-03-23",
+        "location": "Goa",
         "link": "https://www.badmintonindia.org/",
         "logo": "images/events_default_logo.png"
     }

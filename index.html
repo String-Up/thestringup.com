@@ -77,7 +77,7 @@
          <div class="row">
             <div class="col-md-7">
                <div class="banner-txt">
-                  <span class="lead">Lorem ipsum dolor</span>
+                  <!-- <span class="lead">Lorem ipsum dolor</span> -->
                   <h1 class="text-uppercase mt-3 mb-5">Your Badminton Companion</h1>
                   <a href="#academy-section" class="btn btn-primary banner-btn academy-btn">Academy</a>
                   <a href="#player-section" class="btn btn-primary banner-btn player-btn">Player</a>
@@ -90,37 +90,6 @@
 
    <section id="academy-section" class="gallery-sec position-relative">
       
-      <!-- <section id="academy-section" class="gallery-sec position-relative" style="background-image: url('images/academy-bg.png');"></section> -->
-      <!-- <div class="gallery-items d-sm-flex justify-content-between"> -->
-         <!-- <div class="item" id="item1">
-            <div class="cat-meta">
-               <a href="#">Sports & ftiness</a>
-            </div>
-            <h3 class="sub-title"><a href="single-post.html">Prepare for matches</a> </h3>
-         </div>
-         <div class="item" id="item2">
-            <div class="cat-meta">
-               <a href="#">Sports & ftiness</a>
-            </div>
-            <h3 class="sub-title"><a href="single-post.html">Gulf is mine favourite</a> </h3>
-         </div>
-         <div class="item" id="item3">
-            <div class="cat-meta">
-               <a href="#">Sports & ftiness</a>
-            </div>
-            <h3 class="sub-title"><a href="single-post.html">A Beautiful Vanue</a> </h3>
-         </div>
-         <div class="item" id="item4">
-            <div class="cat-meta">
-               <a href="#">Sports & ftiness</a>
-            </div>
-            <h3 class="sub-title"><a href="single-post.html">Passion for the game</a> </h3>
-         </div> -->
-         <!-- <div class="frame30"> -->
-            <!-- <div class="group8">
-               <img class="image8" src="images/academy-bg.png" />
-               <div class="scrim"></div>
-           </div> -->
            <div class="content-container">
                <div class="academy">Academy</div>
                <div class="horizontal-inset">
@@ -303,7 +272,7 @@
 	<!-- Footer Section Start -->
 	<footer class="footer jarallax bg-cover">
 		<div class="container">
-			<div class="row">
+			<div class="row col-lg-12 col-xl-12 col-sm-12">
 				<div class="col-lg-4 col-xl-3 col-sm-6">
 					<div class="footer-widget">
 						<!-- <h3 class="widget-title text-uppercase text-white">Get In Touch</h3> -->
@@ -345,10 +314,10 @@
                   <h3 class="text-info mb-2">Quick Links</h3>
                   <ul class="mt-4">
                      <li class="d-flex align-items-center">
-								<a href="#">Privacy Policy</a>
+								<a href="privacypolicy.html" >Privacy Policy</a>
 							</li>
                      <li class="d-flex align-items-center">
-								<a href="#">Term & Conditions</a>
+								<a href="termsandconditions.html">Term & Conditions</a>
 							</li>
                   </ul>
                   </div>
@@ -383,7 +352,7 @@
                </div>
             </div>
 			</div>
-			<div class="row pt-5 my-0 mt-5">
+			<div class="row my-0">
 				<div class="col-lg-12 pt-4 copy-right">
 					<p class="m-0 text-center">Copyright ©2024 StringUp. All rights reserved.</p>
 				</div>
@@ -405,6 +374,20 @@
    <script src="js/isotope.pkgd.min.js"></script>
    <script src="js/purecounter_vanilla.js"></script>
    <script src="js/custom.js"></script>
+   <script>
+      document.querySelectorAll('.banner-txt a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+
+                window.scrollTo({
+                    top: targetSection.offsetTop - document.querySelector('header').offsetHeight,
+                    behavior: 'smooth'
+                });
+            });
+        });
+   </script>
 </body>
 
 </html>
