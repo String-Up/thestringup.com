@@ -9,12 +9,27 @@
     src: url('../fonts/inter/Inter-SemiBold.otf') format('opentype');
 }
 
+@font-face {
+    font-family: 'InterBold';
+    src: url('../fonts/inter/Inter-Bold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'HelveticaBold';
+    src: url('../fonts/helvetica/HelveticaNeueBold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'InterItalic';
+    src: url('../fonts/inter/Inter-Italic.otf') format('opentype');
+}
+
 body {
     font-family: 'InterRegular';
     margin: 0;
     padding: 0;
     overflow-x: hidden; /* Prevent horizontal scrolling */
-    background-color: #F9F7E8;
+    background-color: #ffffff;
 }
 .preloader span {
     background: #283973;
@@ -67,27 +82,31 @@ body {
  } */
 
  .banner-txt .banner-btn {
-    font-family: 'InterRegular';
-    font-size: 14px;
-    width: 120px;
-    height: 48px;
-    padding: 14px 24px 14px 24px;
+    font-family: 'InterSemiBold';
+    font-size: 18px;
+    width: 160px;
+    height: 64px;
+    padding: 18px 38.5px 18px 38.5px;
     border: rgba(236, 190, 70, 1) 1px solid;
  }
  .banner-txt .player-btn {
-    background: rgba(236, 190, 70, 1);
-    color: rgba(0, 0, 0, 1);
+    background: #ffffff;
+    color: #283973;
+    border: none;
+    margin-left: 24px;
  }
  .banner-txt .academy-btn {
-    background: rgba(0, 0, 0, 1);
+    background: #283973;
     color: rgba(255, 255, 255, 1);
-    margin-left: 16px;
+    /* margin-left: 16px; */
+    border: none;
  }
 h1.text-uppercase {
-    font-family: 'InterRegular';
-    font-size: 40px;
-    line-height: 58px;
-    color: rgba(249, 247, 232, 1);
+    font-family: 'HelveticaBold';
+    font-size: 96px;
+    line-height: 102px;
+    color: #ffffff;
+    text-transform: none !important;
 }
 span.lead {
     font-family: 'InterRegular';
@@ -110,9 +129,21 @@ span.lead {
 }
 .player-btn:active, .player-btn:focus, .player-btn:hover {
     opacity: 0.8;
+    background: #ffffff;
+    color: #283973;
 }
 .academy-btn:active, .academy-btn:focus, .academy-btn:hover {
     opacity: 0.8;
+    background: #283973;
+    color: rgba(255, 255, 255, 1);
+}
+:not(.btn-check)+.player-btn:active {
+    background: #ffffff;
+    color: #283973;
+}
+:not(.btn-check)+.academy-btn:active {
+    background: #283973;
+    color: rgba(255, 255, 255, 1);
 }
 .footer {
     background: rgba(40, 57, 115, 1);
@@ -202,6 +233,7 @@ span.lead {
 
 #player-section {
     padding: 25px 20px;
+    background-color: #F9F7E7;
 }
 #academy-section {
     padding: 25px 20px;
@@ -209,14 +241,17 @@ span.lead {
 .player-section-app-card {
     margin-top: 10px;
     /* padding-left: 190px; */
-    background: #F9F7E8;
+    /* background: #F9F7E8; */
     justify-content: center;
     align-items: center;
-    gap: 64px;
+    gap: 20px;
     display: flex;
     flex-wrap: wrap; /* Allow items to wrap to the next line */
 }
 
+.bg-light {
+    background-color: #ffffff !important;
+}
 
 
 .player-section-android-card, .player-section-apple-card {
@@ -231,13 +266,17 @@ span.lead {
     margin-bottom: 20px; /* Add space between rows on smaller screens */
 }
 
+.player-section-apple-card {
+    margin-left: -40px;
+}
+
 .player-section-card-text {
     width: 158px;
     color: white;
-    font-size: 16px;
+    font-size: 18px;
     font-family: 'InterRegular';
     font-weight: 400;
-    line-height: 26px;
+    line-height: 30px;
     letter-spacing: 0.04px;
     word-wrap: break-word;
 }
@@ -245,6 +284,9 @@ span.lead {
 .player-section-android-card:hover, .player-section-apple-card:hover {
     transform: translateY(-5px);
     transition: all .4s ease-in-out;
+}
+.feature-sec:before {
+    background: #F9F7E7;
 }
 
 .frame30 {
@@ -290,21 +332,29 @@ span.lead {
     text-align: center;
 }
 
+.content-container-academy {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    /* max-width: 1260px; */
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
 .gallery-sec {
     background-color: #ffffff;
 }
 
 .academy {
-    font-family: 'InterRegular';
+    font-family: 'HelveticaBold', sans-serif;
     width: 100%;
     color: #283973;
-    font-size: 48px;
-    font-weight: 400;
+    font-size: 58px;
     text-transform: uppercase;
-    line-height: 64px;
-    letter-spacing: 0.10px;
+    line-height: 20px;
     word-wrap: break-word;
-    margin-top: 20px;
+    margin-top: 50px;
 }
 
 .horizontal-inset {
@@ -324,20 +374,49 @@ span.lead {
 }
 
 .headline {
-    font-family: 'InterRegular';
+    font-family: 'HalveticaBold', sans-serif;
     width: 100%;
-    color: #283973;
-    font-size: 40px;
-    font-weight: 400;
-    text-transform: uppercase;
-    line-height: 64px;
-    letter-spacing: 0.10px;
+    color: #000000;
+    font-size: 32px;
+    text-transform: capitalize;
+    line-height: 40px;
+    letter-spacing: 1px;
     word-wrap: break-word;
-    margin-bottom: 20px;
+    margin-top: 32px;
 }
 
 .group7 {
     width: 100%;
+}
+
+.academy-section-card {
+    width: 100%;
+    height: 393px;
+    padding: 110px 32px 110px 32px;
+    border-radius: 16px;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    display: flex;
+    background-color: transparent;
+    color: #ffffff;
+}
+
+.academy-section-card p {
+    font-size: 16px;
+    letter-spacing: 0.1px;
+    line-height: 24px;
+    text-align: left;
+}
+
+.academy-section-card h3 {
+    font-family: 'InterBold';
+    color: #FFFFFF;
+    font-size: 24px;
+    letter-spacing: 0.1px;
+    left: 0px;
+    text-align: left;
 }
 
 .academy-card {
@@ -391,7 +470,7 @@ span.lead {
 } */
 
 .group4 .academy-card-title {
-    font-family: 'InterSemiBold';
+    font-family: 'HelveticaBold';
     width: 220px;
     height: 52px;
     color: #ECBE46;
@@ -443,7 +522,7 @@ span.lead {
   
   .aboutus-title {
     font-size: 50px;
-    font-family: InterSemiBold, sans-serif;
+    font-family: HelveticaBold, sans-serif;
     font-weight: 600;
     color: black;
     line-height: 1.2;
@@ -472,7 +551,7 @@ span.lead {
   
   .our-mission, .what-sets-us-apart, .our-team-title {
     font-size: 54px;
-    font-family: InterSemiBold, sans-serif;
+    font-family: HelveticaBold, sans-serif;
     font-weight: 600;
     color: black;
     text-align: center;
@@ -481,7 +560,7 @@ span.lead {
   
   .personalized-service, .hr-turnaround, .passion-for-excellence, .quality-materials {
     font-size: 32px;
-    font-family: InterSemiBold, sans-serif;
+    font-family: HelveticaBold, sans-serif;
     font-weight: 600;
     color: black;
     text-align: center;
@@ -490,6 +569,24 @@ span.lead {
 
   .contactus-card {
     height: 325px;
+    border: 1px solid #e8e8e8;
+  }
+
+  .contactus-card h3 {
+    font-family: 'InterBold';
+  }
+
+  .contact-txt h2 {
+    font-family: 'InterBold';
+    letter-spacing: 0.5px;
+  }
+
+  .sec-title.line.primary:before, .sec-title.primary.line-left:before {
+    background-color: #283973;
+  }
+
+  .list-unstyled li{
+    font-family: 'InterRegular';
   }
 
   .contactus-card .icon, .contactus-card .icon-sm {
@@ -516,14 +613,14 @@ span.lead {
     width: 25%;
 }
 .sec-title {
-    font-family: InterSemiBold, sans-serif;
+    font-family: HelveticaBold, sans-serif;
 }
 
 .icon-calendar, .icon-map-pin {
     color: #F06554;
 }
 .text-uppercase-bold {
-    font-family: InterSemiBold, sans-serif; 
+    font-family: HelveticaBold, sans-serif; 
 }
 .single-match {
     background-color: #ffffff;
@@ -531,8 +628,210 @@ span.lead {
 .about-tab .nav-tabs li .nav-link.active:before, .about-tab .nav-tabs li .nav-link:focus:before {
     background-color: #F06554;      
 }
+header .navbar .navbar-nav li a.nav-link {
+    color: #273775;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'InterRegular';
+}
+.nav-link:hover, .nav-link:focus {
+    color: #273775;
+}
+header .navbar .nav-cta a.btn {
+    font-size: 14px;
+
+}
+.carousel-control-prev {
+    left: -72px;
+}
+.carousel-control-next {
+    right: -72px;
+}
+.carousel-control-next-icon {
+    /* background-image: none; */
+}
+.carousel-control-prev-icon {
+    /* background-image: url('../images/icons/prev.png'); */
+}
+.carousel-control-next-icon, .carousel-control-prev-icon {
+    background-image: none;
+    width: 64px;
+    height: 64px;
+    padding: 15px;
+    background: #F7F7F7;
+}
+.border-grey {
+    border: 1px grey solid;
+}
+
+.mt-player {
+    margin-right: 231px;
+}
+.mt-player .mb-4 {
+    margin-right: -14px;
+}
+.text-info {
+    font-family: 'InterBold';
+    font-size: 24px;
+}
+.footer-menu-item {
+    margin-bottom: 8px !important;
+    font-size: 16px;
+}
+.footer .copy-right {
+    font-size: 14px; 
+    padding: 0px 0px 12px 0px;
+    border: none;
+}
+.footer .copy-right p {
+    font-size: 14px;
+}
+.events-section-banner .promo-txt h1{
+    font-size: 72px;
+    letter-spacing: 0.5px
+}
+.event-category {
+    color: #000000;
+    opacity: 0.6;
+    font-family: 'InterSemiBold';
+    font-size: 20px;
+}
+.event-title {
+    font-family: 'InterSemiBold';
+    font-size: 32px;
+    letter-spacing: 0.1px;
+    line-height: 40px;
+}
+.about-tab .nav-tabs li .nav-link{
+    font-family: 'HelveticaBold';
+    color: #273775;
+    letter-spacing: 0.1px;
+
+}
+.about-tab .nav-tabs li .nav-link.active:before, .about-tab .nav-tabs li .nav-link:focus:before {
+    background-color: #273775;
+}
+.contact-txt .call-widget a span, .faq-item button, .h4, .lead, .product-details-tab .nav-tabs li .nav-link, h4 {
+    font-family: 'InterBold';
+    letter-spacing: 0.1px;
+    line-height: 28px;
+    font-size: 18px;
+}
+.accordion-body p {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+}
+section.promo-sec:before {
+    background: none;
+}
+.promo-sec {
+position: relative;
+width: 100%;
+height: 320px; /* Adjust height as needed */
+background-size: cover;
+background-position: center;
+clip-path: polygon(0px 0px, 100% 0px, 100% 100%, 0px 100%);
+display: flex;
+align-items: center;
+justify-content: center;
+color: white;
+text-align: center;
+}
+
+.promo-sec::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, 0.5); /* Optional: Semi-transparent overlay for better text readability */
+z-index: 1; /* Ensure overlay appears below the content */
+}
+
+.promo-txt {
+position: relative;
+z-index: 2; /* Ensure content appears above the background image */
+color: white; /* Adjust text color for better readability */
+padding: 20px; /* Adds some padding */
+}
+    
+/* .carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+    display: flex;
+}
+.carousel-inner .carousel-item-right,
+.carousel-inner .carousel-item-left{ 
+  transform: translateX(0);
+} */
+.aboutus-padding {
+    margin-top: 48px;
+}
+h3 {
+    font-family: 'InterBold';
+}
+.about-tab-custom .nav-tabs li { 
+    width: 50%;
+}
+.aboutus-tab-row-padding {
+    padding: 60px;
+}
+.aboutus-text-team {
+    font-size: 48px;
+    font-family: 'HelveticaBold';
+    color: #273775;
+    text-transform: capitalize !important;
+}
+.aboutus-text-designation {
+    font-size: 22px;
+    color: #000000;
+    opacity: 0.45;
+}
+.aboutus-team-desc {
+    font-family: 'InterItalic';
+    font-size: 18px;
+    line-height: 32px;
+    letter-spacing: 0.1px;
+}
+.graphic-media-cofounder-g {
+    padding-left: 100px;
+    width: 520px;
+}
+.txt-title {
+    font-family: 'InterSemiBold';
+    font-size: 28px;
+    line-height: 40px;
+    color: #273775;
+    padding-bottom: 16px;
+}
+.txt-content {
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: 0.1px;
+    color: #000000;
+    opacity: 0.8;
+}
+.pt-responsive-bottom {
+    padding-top: 64px;
+}
+.QrCode {
+    width: 135px;
+    height: 135px;
+    position: relative;
+}
+a.navbar-brand {
+    width: 200px;
+}
+.mobile-carousel {
+    display: none;
+}
+.desktop-carousel {
+    display: block;
+}
 /* .about-tab .nav-tabs li .nav-link {
-    font-family: InterSemiBold;
+    font-family: HelveticaBold;
 } */
   /* Responsive Styles */
   @media (max-width: 1200px) {
@@ -548,72 +847,6 @@ span.lead {
     .welcome-text, .mission-text, .personalized-service-text, .hr-turnaround-text, .passion-for-excellence-text, .quality-materials-text, .team-text {
       font-size: 18px;
     }
-  }
-  
-  @media (max-width: 992px) {
-    .aboutus-title {
-      font-size: 54px;
-    }
-    .our-mission, .what-sets-us-apart, .our-team-title {
-      font-size: 36px;
-    }
-    .personalized-service, .hr-turnaround, .passion-for-excellence, .quality-materials {
-      font-size: 24px;
-    }
-    .welcome-text, .mission-text, .personalized-service-text, .hr-turnaround-text, .passion-for-excellence-text, .quality-materials-text, .team-text {
-      font-size: 16px;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .aboutus-title {
-      font-size: 48px;
-    }
-    .our-mission, .what-sets-us-apart, .our-team-title {
-      font-size: 32px;
-    }
-    .personalized-service, .hr-turnaround, .passion-for-excellence, .quality-materials {
-      font-size: 22px;
-    }
-    .welcome-text, .mission-text, .personalized-service-text, .hr-turnaround-text, .passion-for-excellence-text, .quality-materials-text, .team-text {
-      font-size: 14px;
-    }
-  }
-  
-  @media (max-width: 576px) {
-    .aboutus-title {
-      font-size: 36px;
-    }
-    .our-mission, .what-sets-us-apart, .our-team-title {
-      font-size: 28px;
-    }
-    .personalized-service, .hr-turnaround, .passion-for-excellence, .quality-materials {
-      font-size: 20px;
-    }
-    .welcome-text, .mission-text, .personalized-service-text, .hr-turnaround-text, .passion-for-excellence-text, .quality-materials-text, .team-text {
-      font-size: 12px;
-    }
-  }
-  
-  /* Media Queries for responsiveness */
-  @media (max-width: 768px) {
-    .aboutus-header-title {
-      font-size: 8vw;
-    }
-    .aboutus-mission-title, .aboutus-value-title, .aboutus-service-title, .aboutus-team-title, .aboutus-team-subtitle {
-      font-size: 5vw;
-    }
-    .aboutus-mission-text, .aboutus-value-text, .aboutus-service-text, .aboutus-team-content, .aboutus-section-text {
-      font-size: 1.5rem;
-    }
-    .aboutus-section-title {
-      font-size: 7vw;
-    }
-  }
-  
-
-
-@media (max-width: 1200px) {
     .player-section-app-card {
         padding-left: 20px; /* Adjust padding for smaller screens */
         gap: 30px; /* Adjust gap for smaller screens */
@@ -628,9 +861,21 @@ span.lead {
     a.navbar-brand {
         width: 50%;
     }
-}
-
+  }
+  
 @media (max-width: 992px) {
+    .aboutus-title {
+        font-size: 54px;
+      }
+      .our-mission, .what-sets-us-apart, .our-team-title {
+        font-size: 36px;
+      }
+      .personalized-service, .hr-turnaround, .passion-for-excellence, .quality-materials {
+        font-size: 24px;
+      }
+      .welcome-text, .mission-text, .personalized-service-text, .hr-turnaround-text, .passion-for-excellence-text, .quality-materials-text, .team-text {
+        font-size: 16px;
+      }
     .player-section-app-card {
         padding-left: 10px; /* Adjust padding for smaller screens */
         gap: 20px; /* Adjust gap for smaller screens */
@@ -649,6 +894,37 @@ span.lead {
 }
 
 @media (max-width: 768px) {
+    .aboutus-title {
+        font-size: 48px;
+      }
+      .our-mission, .what-sets-us-apart, .our-team-title {
+        font-size: 32px;
+      }
+      .personalized-service, .hr-turnaround, .passion-for-excellence, .quality-materials {
+        font-size: 22px;
+      }
+      .welcome-text, .mission-text, .personalized-service-text, .hr-turnaround-text, .passion-for-excellence-text, .quality-materials-text, .team-text {
+        font-size: 14px;
+      }
+      .promo-sec {
+          height: 250px; /* Adjust height for tablets */
+        }
+    
+        .promo-txt h1 {
+          font-size: 1.5rem; /* Adjust font size for better readability on smaller screens */
+        }
+    .aboutus-header-title {
+        font-size: 8vw;
+      }
+      .aboutus-mission-title, .aboutus-value-title, .aboutus-service-title, .aboutus-team-title, .aboutus-team-subtitle {
+        font-size: 5vw;
+      }
+      .aboutus-mission-text, .aboutus-value-text, .aboutus-service-text, .aboutus-team-content, .aboutus-section-text {
+        font-size: 1.5rem;
+      }
+      .aboutus-section-title {
+        font-size: 7vw;
+      }
     .player-section-android-card, .player-section-apple-card {
         padding: 8px; /* Adjust padding for smaller screens */
         width: 100%; /* Make cards full width on small screens */
@@ -664,9 +940,41 @@ span.lead {
     a.navbar-brand {
         width: 50%;
     }
+    .player-section-apple-card {
+        margin-left: 0px;
+    }
+    /* .carousel-inner .carousel-item > div {
+        display: none;
+    }
+    .carousel-inner .carousel-item > div:first-child {
+        display: block;
+    } */
+    .promo-sec {
+        height: 200px; /* Adjust height for mobile devices */
+      }
+  
+      .promo-txt h1 {
+        font-size: 1.25rem; /* Adjust font size for better readability on smaller screens */
+      }
+  
+      .promo-txt {
+        padding: 10px; /* Reduce padding for smaller screens */
+      }
 }
 
 @media (max-width: 576px) {
+    .aboutus-title {
+        font-size: 36px;
+      }
+      .our-mission, .what-sets-us-apart, .our-team-title {
+        font-size: 28px;
+      }
+      .personalized-service, .hr-turnaround, .passion-for-excellence, .quality-materials {
+        font-size: 20px;
+      }
+      .welcome-text, .mission-text, .personalized-service-text, .hr-turnaround-text, .passion-for-excellence-text, .quality-materials-text, .team-text {
+        font-size: 12px;
+      }
     .player-section-card-text {
         font-size: 14px; /* Adjust font size for smaller screens */
         width: auto; /* Adjust width for smaller screens */
@@ -684,9 +992,91 @@ span.lead {
     .howitworks-banner {
         min-height: 0vh;
     }
+    h1.text-uppercase {
+        font-size: 60px;
+        line-height: 65px;
+    }
+    .banner-txt .player-btn {
+        margin-left: 24px;
+    }
+    .banner-txt .banner-btn {
+        width: 148px;
+    }
+    .carousel-control-prev {
+        left: -40px;
+    }
+    .carousel-control-next {
+        right: -40px;
+    }
+    .player-card {
+        background: #F9F7E7;
+        padding: 32px;
+    }
+    .headline {
+        margin-top: 32px;
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: 0px;
+    }
+    .academy {
+        margin-top: 70px;
+        font-size: 48px;
+    }
+    .mt-player {
+        margin-top: -64px;
+    }
+    .mt-player .mb-4 {
+        margin-bottom: -28px !important;
+    }
+    .about-tab-custom .nav-tabs li {
+        width:100%;
+        font-size: 32px;
+    }
+    .graphic-media-cofounder-g {
+        padding-left: 0px;
+    }
+    .aboutus-cofounder-padding {
+        padding: 64px 0px 0px 64px;
+    }
+    .mt-aboutus-cofounder {
+        margin-top: -60px;
+    }
+    .pt-responsive-bottom {
+        padding-top: 0px;
+    }
+    .QrCode {
+        display: none; /* Hide QR code on smaller screens */
+    }
+    .mobile-carousel {
+        display: block;
+    }
+    .desktop-carousel {
+        display: none;
+    }
 }
-/* .icon, .icon-sm {
-    height: 64px;
-    width: 64px;
-}  */
+ /** Courosel CSS **/
+ @media (max-width: 768px) {
+    
+}
+
+
+
+/* display 3 */
+/* @media (min-width: 768px) {
+    
+    .carousel-inner .carousel-item-right.active,
+    .carousel-inner .carousel-item-next {
+      transform: translateX(33.333%);
+    }
+    
+    .carousel-inner .carousel-item-left.active, 
+    .carousel-inner .carousel-item-prev {
+      transform: translateX(-33.333%);
+    }
+
+} */
+
+
+
+
 

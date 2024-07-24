@@ -46,7 +46,7 @@
                   </span>
                </span>
             </button>
-            <a class="navbar-brand" href="index.html"><img src="images/stringup-logo.png" alt="Logo"></a>
+            <a class="navbar-brand" href="index.html"><img src="images/stringup-logo.png" style="margin-top: 8px;" alt="Logo"></a>
             
             <div class="nav-cta order-lg-3">
                <div class="d-flex align-items-center justify-content-between">
@@ -59,7 +59,7 @@
                   <li class="nav-item"><a class="nav-link" href="howitworks.html">How It Works</a></li>
                   <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
                   <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-                  <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                  <li class="nav-item"><a class="nav-link" href="faq.html">FAQ's</a></li>
                   <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                </ul>
             </div>
@@ -67,18 +67,20 @@
       </nav>
    </header>
    <!-- Header End -->
-
+   <section class="promo-sec position-relative events-section-banner" style="background-image: url('images/eventsoverlay-3.png');">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-12">
+               <div class="promo-txt">
+                  <h1 class="text-uppercase text-info mt-3 mb-5 text-center">Events</h1>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
    <!-- Events Section Start -->
    <section class="match-section sec-padding" style="margin-top: -115px;">
       <div class="container">
-         <div class="row">
-            <div class="col-lg-6 mx-auto text-center">
-               <h2 class="sec-title line">Events</h2>
-               <p>Provide a comprehensive directory of golf courses, including details such as location, course layout,
-                  facilities, and
-                  user reviews.</p>
-            </div>
-         </div>
          <div class="row mt-5" id="events-container">
             <!-- Events will be injected here by JavaScript -->
             <!-- <div class="team-logo d-flex justify-content-between align-items-center">
@@ -105,7 +107,7 @@
 								<span><i class="feather-icon icon-mail"></i></span>
 								<a href="mailto:support@gmail.com">support@gmail.com</a>
 							</li> -->
-							<li class="d-flex align-items-center">
+							<li class="d-flex align-items-center footer-menu-item">
 								<!-- <span><i class="feather-icon icon-map-pin"></i></span> -->
 								4th floor, Sidhi Apartments, Park Avenue Colony, Dharam Karan Road, Park Avenue Colony, Ameerpet, Hyderabad-500016
 							</li>
@@ -116,13 +118,13 @@
                <div class="footer-widget">
                   <h3 class="text-info mb-2">Menu</h3>
                   <ul class="mt-4">
-                     <li class="d-flex align-items-center">
+                     <li class="d-flex align-items-center footer-menu-item">
 								<a href="about.html">About Us</a>
 							</li>
-                     <li class="d-flex align-items-center">
+                     <li class="d-flex align-items-center footer-menu-item">
                         <a href="events.html">Events</a>
 							</li>
-                     <li class="d-flex align-items-center">
+                     <li class="d-flex align-items-center footer-menu-item">
                         <a href="contact.html">Contact Us</a>
 							</li>
                   </ul>
@@ -132,10 +134,10 @@
                <div class="footer-widget">
                   <h3 class="text-info mb-2">Quick Links</h3>
                   <ul class="mt-4">
-                     <li class="d-flex align-items-center">
+                     <li class="d-flex align-items-center footer-menu-item">
 								<a href="privacypolicy.html" >Privacy Policy</a>
 							</li>
-                     <li class="d-flex align-items-center">
+                     <li class="d-flex align-items-center footer-menu-item">
 								<a href="termsandconditions.html">Term & Conditions</a>
 							</li>
                   </ul>
@@ -211,17 +213,14 @@
                       const eventElement = document.createElement('div');
                       eventElement.className = 'single-match d-md-flex border rounded-4 justify-content-between align-items-center mb-4';
                       eventElement.innerHTML = `
-                          <div class="match-info">
-                              <p>${event.category}</p>
-                              <h3 class="text-uppercase text-uppercase-bold">${event.title}</h3>
+                          <div class="match-info col-md-8">
+                              <p class="event-category">${event.category}</p>
+                              <h3 class="event-title text-uppercase-bold">${event.title}</h3>
                               <p><i class="feather-icon icon-calendar me-2"></i>${event.date}</p>
                               <p><i class="feather-icon icon-map-pin me-2"></i>${event.location}</p>
                           </div>
-                          <div class="team-logo d-flex justify-content-between align-items-center">
-               <a href="#"><img class="img-fluid" src=${event.logo} alt=""></a>
-            </div>
                           <div class="match-ticket">
-                              <a href="${event.link}" tar class="btn login-btn">More</a>
+                              <a href="${event.link}" tar class="btn login-btn">See Details</a>
                           </div>
                       `;
                       eventsContainer.appendChild(eventElement);

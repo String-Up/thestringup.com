@@ -40,15 +40,15 @@
    <header class="header header-2">
 	<nav class="navbar navbar-expand-lg p-0">
 	   <div class="container">
-		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-               aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-               <span class="navbar-toggler-icon">
-                  <span class="toggle-wrap">
-                     <span class="toggle-bar"></span>
-                  </span>
-               </span>
-            </button>
-		  <a class="navbar-brand" href="index.html"><img src="images/stringup-logo.png" alt="Logo"></a>
+		  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+			 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			 <span class="navbar-toggler-icon">
+				<span class="toggle-wrap">
+				   <span class="toggle-bar"></span>
+				</span>
+			 </span>
+		  </button>
+		  <a class="navbar-brand" href="index.html"><img src="images/stringup-logo.png" style="margin-top: 8px;" alt="Logo"></a>
 		  
 		  <div class="nav-cta order-lg-3">
 			 <div class="d-flex align-items-center justify-content-between">
@@ -61,7 +61,7 @@
 				<li class="nav-item"><a class="nav-link" href="howitworks.html">How It Works</a></li>
 				<li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
 				<li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-				<li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+				<li class="nav-item"><a class="nav-link" href="faq.html">FAQ's</a></li>
 				<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
 			 </ul>
 		  </div>
@@ -71,18 +71,12 @@
  <!-- Header End -->
 
 	<!-- Promo Section Start -->
-	<section class="promo-sec position-relative jarallax" style="background-image: url('images/promo-sec.jpg');">
+	<section class="promo-sec position-relative" style="background-image: url('images/contactusbanner.png');">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
 					<div class="promo-txt">
 						<h1 class="text-uppercase text-info mt-3 mb-5 text-center">Contact Us</h1>
-						<nav aria-label="breadcrumb">
-							<ol class="breadcrumb">
-								<li class="breadcrumb-item"><a href="#">Pages</a></li>
-								<li class="breadcrumb-item active" aria-current="page">Contact</li>
-							</ol>
-						</nav>
 					</div>
 				</div>
 			</div>
@@ -93,7 +87,7 @@
 	<!-- Contact Section Start -->
 	<section class="contact-card-sec sec-padding" style="margin-top: -115px;">
 		<div class="container">
-			<h2 class="sec-title line" style="text-align: center;">Contact Us</h2>
+			<!-- <h2 class="sec-title line" style="text-align: center;">Contact Us</h2> -->
 			<div class="row gy-3 gy-md-0">
 				<div class="col-md-4">
 					<div class="contact-card text-center rounded-3 contactus-card">
@@ -141,28 +135,26 @@
 	<!-- Google Map Section End -->
 
 	<!-- Contact Section Start -->
-	<section class="contact2-sec  sec-padding">
+	<section class="contact2-sec">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-6">
 					<div class="contact-txt">
 						<h2 class="sec-title primary line-left">Feel Free to Contact with Us anytime</h2>
-						<p>Provide a comprehensive directory of golf courses, including details such as location, course
-							layout, facilities, and
-							user reviews. Because good passion gives you happiness perfect dedication gives you success</p>
+						<p>Ready to experience the difference of a perfectly re-strung racket? Reach out to us today to learn more about our services, pricing, and how we can help you up your badminton game. Join the STRINGUP family and elevate your playing experience.</p>
 
 					</div>
 				</div>
 				<div class="col-lg-6">
 					<div class="contact-form">
-						<form action="#" class="row">
+						<form id="contactForm" action="#" class="row">
 							<div class="col-lg-6 form-group">
 								<i class="feather-icon icon-user"></i>
-								<input type="text" placeholder="Name">
+								<input type="text" id="name" placeholder="Name" required>
 							</div>
 							<div class="col-lg-6 form-group">
-								<select name="subject" id="select-options">
-									<option data-select="select">Choose Subject</option>
+								<select name="subject" id="select-options" required>
+									<option value="" disabled selected>Choose Subject</option>
 									<option value="1">Player</option>
 									<option value="2">Academy</option>
 									<option value="3">Feedback</option>
@@ -170,20 +162,21 @@
 							</div>
 							<div class="col-lg-6 form-group">
 								<i class="feather-icon icon-mail"></i>
-								<input type="text" placeholder="Email Address">
+								<input type="email" id="email" placeholder="Email Address" required>
 							</div>
 							<div class="col-lg-6 form-group">
 								<i class="feather-icon icon-phone-call"></i>
-								<input type="text" placeholder="Phone Number">
+								<input type="text" id="phone" placeholder="Phone Number" required>
 							</div>
 							<div class="col-lg-12 form-group">
-								<textarea name="message" id="message" rows="6" placeholder="Enter your message"></textarea>
+								<textarea name="message" id="message" rows="6" placeholder="Enter your message" required></textarea>
 							</div>
 							<div class="col-lg-12">
 								<!-- <button class="btn btn-dark mt-4 text-primary">Submit Now</button> -->
-								<a href="#" class="btn login-btn">Submit Now</a>
+								<button type="submit" class="btn login-btn">Submit Now</button>
 							</div>
 						</form>
+						<div id="formResponse"></div>
 					</div>
 				</div>
 			</div>
@@ -191,6 +184,8 @@
 	</section>
 	<!-- Contact Section End -->
 	<!-- Footer Section Start -->
+	
+	<!-- Footer Section End -->
 	<footer class="footer jarallax bg-cover">
 		<div class="container">
 			<div class="row col-lg-12 col-xl-12 col-sm-12">
@@ -207,7 +202,7 @@
 								<span><i class="feather-icon icon-mail"></i></span>
 								<a href="mailto:support@gmail.com">support@gmail.com</a>
 							</li> -->
-							<li class="d-flex align-items-center">
+							<li class="d-flex align-items-center footer-menu-item">
 								<!-- <span><i class="feather-icon icon-map-pin"></i></span> -->
 								4th floor, Sidhi Apartments, Park Avenue Colony, Dharam Karan Road, Park Avenue Colony, Ameerpet, Hyderabad-500016
 							</li>
@@ -218,13 +213,13 @@
                <div class="footer-widget">
                   <h3 class="text-info mb-2">Menu</h3>
                   <ul class="mt-4">
-                     <li class="d-flex align-items-center">
+                     <li class="d-flex align-items-center footer-menu-item">
 								<a href="about.html">About Us</a>
 							</li>
-                     <li class="d-flex align-items-center">
+                     <li class="d-flex align-items-center footer-menu-item">
                         <a href="events.html">Events</a>
 							</li>
-                     <li class="d-flex align-items-center">
+                     <li class="d-flex align-items-center footer-menu-item">
                         <a href="contact.html">Contact Us</a>
 							</li>
                   </ul>
@@ -234,12 +229,12 @@
                <div class="footer-widget">
                   <h3 class="text-info mb-2">Quick Links</h3>
                   <ul class="mt-4">
-					<li class="d-flex align-items-center">
-						<a href="privacypolicy.html" >Privacy Policy</a>
-					</li>
-			 <li class="d-flex align-items-center">
-						<a href="termsandconditions.html">Term & Conditions</a>
-					</li>
+                     <li class="d-flex align-items-center footer-menu-item">
+								<a href="privacypolicy.html" >Privacy Policy</a>
+							</li>
+                     <li class="d-flex align-items-center footer-menu-item">
+								<a href="termsandconditions.html">Term & Conditions</a>
+							</li>
                   </ul>
                   </div>
             </div>
@@ -280,8 +275,6 @@
 			</div>
 		</div>
 	</footer>
-	<!-- Footer Section End -->
-
 
 	<!-- Back to top -->
 	<div class="back-top"><i class="feather-icon icon-chevron-up"></i></div>
@@ -298,7 +291,43 @@
 	<script src="js/nouislider.min.js"></script>
 
 	<script src="js/custom.js"></script>
+	<script>
+		document.getElementById('contactForm').addEventListener('submit', function(event) {
+		event.preventDefault();
 
+		const name = document.getElementById('name').value;
+		const subject = document.getElementById('select-options').value;
+		const email = document.getElementById('email').value;
+		const phone = document.getElementById('phone').value;
+		const message = document.getElementById('message').value;
+
+		const data = {
+			name: name,
+			subject: subject,
+			email: email,
+			phone: phone,
+			message: message
+		};
+
+		const xhr = new XMLHttpRequest();
+		xhr.open('POST', 'https://your-api-url.com/submit', true); // Replace with your API URL
+		xhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
+
+		xhr.onreadystatechange = function() {
+			if (xhr.readyState === 4) {
+				const responseDiv = document.getElementById('formResponse');
+				if (xhr.status === 200) {
+					responseDiv.innerHTML = '<p class="text-success">Your message has been sent successfully!</p>';
+				} else {
+					responseDiv.innerHTML = '<p class="text-danger">There was an error sending your message. Please try again later.</p>';
+				}
+			}
+		};
+
+		xhr.send(JSON.stringify(data));
+});
+
+	</script>
 </body>
 
 </html>
