@@ -863,6 +863,9 @@ a.navbar-brand {
     text-transform: capitalize;
     color: #273775;
 }
+.contact-card .h3, .contact-card h3 {
+    text-transform: capitalize;
+}
   /* Responsive Styles */
   @media (max-width: 1200px) {
     .aboutus-title {
