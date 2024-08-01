@@ -36,6 +36,48 @@
         flex: 0 0 25%;
       }
     } 
+    /* Ensure card has a fixed height */
+
+
+/* Ensure h3 has a fixed height and overflow is handled */
+.fixed-height-title {
+  height: 50px; /* Adjust this value as needed */
+  overflow: hidden; /* Ensures that overflow text is hidden */
+  text-overflow: ellipsis; /* Adds ellipsis (...) if text is too long */
+  align-items: center; /* Vertically centers the text */
+}
+
+/* Ensure p has a fixed height and overflow is handled */
+.fixed-height-text {
+  height: 120px; /* Adjust this value as needed */
+  overflow: hidden; /* Ensures that overflow text is hidden */
+  text-overflow: ellipsis; /* Adds ellipsis (...) if text is too long */
+  display: -webkit-box;
+  -webkit-line-clamp: 6; /* Limits text to 6 lines */
+  -webkit-box-orient: vertical;
+  line-height: 1.5;
+  max-height: calc(1.5em * 6); /* Adjust based on line-height and number of lines */
+  overflow: hidden; /* Ensures that overflow text is hidden */
+}
+.player-fixed-height-title {
+  height: 65px; /* Adjust this value as needed */
+  overflow: hidden; /* Ensures that overflow text is hidden */
+  text-overflow: ellipsis; /* Adds ellipsis (...) if text is too long */
+  align-items: center; /* Vertically centers the text */
+}
+
+/* Ensure p has a fixed height and overflow is handled */
+.player-fixed-height-text {
+  height: 150px; /* Adjust this value as needed */
+  overflow: hidden; /* Ensures that overflow text is hidden */
+  text-overflow: ellipsis; /* Adds ellipsis (...) if text is too long */
+  display: -webkit-box;
+  -webkit-line-clamp: 6; /* Limits text to 6 lines */
+  -webkit-box-orient: vertical;
+  line-height: 1.5;
+  max-height: calc(1.5em * 6); /* Adjust based on line-height and number of lines */
+  overflow: hidden; /* Ensures that overflow text is hidden */
+}
     /* .carousel-item {
       display: none;
       transition: transform 0.6s ease-in-out;
@@ -152,26 +194,26 @@
                                <div class="card-group">
                                  <div class="card">
                                    <div class="card-body academy-section-card" style="background: url(images/Revenue.png) no-repeat center center;">
-                                     <h3 class="mb-2">Revenue Boost</h3>
-                                     <p>Unlock a new revenue stream through profit-sharing on every restringing service provided to your players and much more.</p>
+                                     <h3 class="mb-2 fixed-height-title">Revenue Boost</h3>
+                                     <p class="fixed-height-text">Unlock a new revenue stream through profit-sharing on every restringing service provided to your players and much more.</p>
                                    </div>
                                  </div>
                                  <div class="card">
                                    <div class="card-body academy-section-card" style="background: url(images/freesoft.png) no-repeat center center;">
-                                     <h3 class="mb-2">Free Software worth ₹15L</h3>
-                                     <p>Eliminate the costs associated with player management software by gaining free access to our advanced platform with periodic upgrades.</p>
+                                     <h3 class="mb-2 fixed-height-title">Free Software worth ₹15L</h3>
+                                     <p class="fixed-height-text">Eliminate the costs associated with player management software by gaining free access to our advanced platform with periodic upgrades.</p>
                                    </div>
                                  </div>
                                  <div class="card">
                                    <div class="card-body academy-section-card" style="background: url(images/enchanced.png) no-repeat center center;">
-                                     <h3 class="mb-2">Enhanced Player Experience</h3>
-                                     <p>Elevate the satisfaction of your players with seamless 24-hour racquet delivery services, ensuring they are always court-ready.</p>
+                                     <h3 class="mb-2 fixed-height-title">Enhanced Player Experience</h3>
+                                     <p class="fixed-height-text">Elevate the satisfaction of your players with seamless 24-hour racquet delivery services, ensuring they are always court-ready.</p>
                                    </div>
                                  </div>
                                  <div class="card">
                                    <div class="card-body academy-section-card" style="background: url(images/liveupdates.png) no-repeat center center;">
-                                     <h3 class="mb-2">Live Updates</h3>
-                                     <p>Keep your players engaged and informed with real-time updates on exclusive promotions, tournament details and personalized messages.</p>
+                                     <h3 class="mb-2 fixed-height-title">Live Updates</h3>
+                                     <p class="fixed-height-text">Keep your players engaged and informed with real-time updates on exclusive promotions, tournament details and personalized messages.</p>
                                    </div>
                                  </div>
                                </div>
@@ -180,26 +222,26 @@
                                <div class="card-group">
                                  <div class="card">
                                    <div class="card-body academy-section-card" style="background: url(images/marketing&prom.png) no-repeat center center;">
-                                     <h3 class="mb-2">Marketing and Promotion</h3>
-                                     <p>Benefit from joint marketing efforts, promotions, and advertising on StringUp.</p>
+                                     <h3 class="mb-2 fixed-height-title">Marketing and Promotion</h3>
+                                     <p class="fixed-height-text">Benefit from joint marketing efforts, promotions, and advertising on StringUp.</p>
                                    </div>
                                  </div>
                                  <div class="card">
                                    <div class="card-body academy-section-card" style="background: url(images/custom.png) no-repeat center center;">
-                                     <h3 class="mb-2">Customer Support</h3>
-                                     <p>Access dedicated customer support from String Up to address any queries or concerns promptly.</p>
+                                     <h3 class="mb-2 fixed-height-title">Customer Support</h3>
+                                     <p class="fixed-height-text">Access dedicated customer support from String Up to address any queries or concerns promptly.</p>
                                    </div>
                                  </div>
                                  <div class="card">
                                    <div class="card-body academy-section-card" style="background: url(images/Revenue.png) no-repeat center center;">
-                                     <h3 class="mb-2">Revenue Boost</h3>
-                                     <p>Unlock a new revenue stream through profit-sharing on every restringing service provided to your players and much more.</p>
+                                     <h3 class="mb-2 fixed-height-title">Revenue Boost</h3>
+                                     <p class="fixed-height-text">Unlock a new revenue stream through profit-sharing on every restringing service provided to your players and much more.</p>
                                    </div>
                                  </div>
                                  <div class="card">
                                    <div class="card-body academy-section-card" style="background: url(images/freesoft.png) no-repeat center center;">
-                                     <h3 class="mb-2">Free Software worth ₹15L</h3>
-                                     <p>Eliminate the costs associated with player management software by gaining free access to our advanced platform with periodic upgrades.</p>
+                                     <h3 class="mb-2 fixed-height-title">Free Software worth ₹15L</h3>
+                                     <p class="fixed-height-text">Eliminate the costs associated with player management software by gaining free access to our advanced platform with periodic upgrades.</p>
                                    </div>
                                  </div>
                                </div>
@@ -208,26 +250,26 @@
                                <div class="card-group">
                                  <div class="card">
                                    <div class="card-body academy-section-card" style="background: url(images/enchanced.png) no-repeat center center;">
-                                     <h3 class="mb-2">Enhanced Player Experience</h3>
-                                     <p>Elevate the satisfaction of your players with seamless 24-hour racquet delivery services, ensuring they are always court-ready.</p>
+                                     <h3 class="mb-2 fixed-height-title">Enhanced Player Experience</h3>
+                                     <p class="fixed-height-text">Elevate the satisfaction of your players with seamless 24-hour racquet delivery services, ensuring they are always court-ready.</p>
                                    </div>
                                  </div>
                                  <div class="card">
                                    <div class="card-body academy-section-card" style="background: url(images/liveupdates.png) no-repeat center center;">
-                                     <h3 class="mb-2">Live Updates</h3>
-                                     <p>Keep your players engaged and informed with real-time updates on exclusive promotions, tournament details and personalized messages.</p>
+                                     <h3 class="mb-2 fixed-height-title">Live Updates</h3>
+                                     <p class="fixed-height-text">Keep your players engaged and informed with real-time updates on exclusive promotions, tournament details and personalized messages.</p>
                                    </div>
                                  </div>
                                  <div class="card">
                                    <div class="card-body academy-section-card" style="background: url(images/marketing&prom.png) no-repeat center center;">
-                                     <h3 class="mb-2">Marketing and Promotion</h3>
-                                     <p>Benefit from joint marketing efforts, promotions, and advertising on StringUp.</p>
+                                     <h3 class="mb-2 fixed-height-title">Marketing and Promotion</h3>
+                                     <p class="fixed-height-text">Benefit from joint marketing efforts, promotions, and advertising on StringUp.</p>
                                    </div>
                                  </div>
                                  <div class="card">
                                    <div class="card-body academy-section-card" style="background: url(images/custom.png) no-repeat center center;">
-                                     <h3 class="mb-2">Customer Support</h3>
-                                     <p>Access dedicated customer support from String Up to address any queries or concerns promptly.</p>
+                                     <h3 class="mb-2 fixed-height-title">Customer Support</h3>
+                                     <p class="fixed-height-text">Access dedicated customer support from String Up to address any queries or concerns promptly.</p>
                                    </div>
                                  </div>
                                </div>
@@ -329,33 +371,33 @@
          <div class="row">
             <div class="col-lg-3 col-md-4 mb-4">
                <div class="card player-card">
-                  <div class="card-body academy-section-card" style="background: url(images/customstrings.png) no-repeat center center;">
-                      <h3 class="mb-2">Custom Strings</h3>
-                      <p>Personalize your game with a wide range of high-quality strings tailored to your playing style, ensuring optimal performance on the court.</p>
+                  <div class="card-body player-section-card-div" style="background: url(images/customstrings.png) no-repeat center center;">
+                      <h3 class="mb-2 player-fixed-height-title">Custom Strings</h3>
+                      <p class="player-fixed-height-text">Personalize your game with a wide range of high-quality strings tailored to your playing style, ensuring optimal performance on the court.</p>
                   </div>
               </div>
             </div>
             <div class="col-lg-3 col-md-4 mb-4">
                <div class="card player-card">
-                  <div class="card-body academy-section-card" style="background: url(images/qualitytested.png) no-repeat center center;">
-                      <h3 class="mb-2">Quality Tested String Tension</h3>
-                      <p>Each racket is meticulously strung and tensioned to exact specifications, ensuring consistent and reliable performance with rigorous testing.</p>
+                  <div class="card-body player-section-card-div" style="background: url(images/qualitytested.png) no-repeat center center;">
+                      <h3 class="mb-2 player-fixed-height-title">Quality Tested String Tension</h3>
+                      <p class="player-fixed-height-text">Each racket is meticulously strung and tensioned to exact specifications, ensuring consistent and reliable performance with rigorous testing.</p>
                   </div>
               </div>
             </div>
             <div class="col-lg-3 col-md-4 mb-4">
                <div class="card player-card">
-                  <div class="card-body academy-section-card" style="background: url(images/24hr.png) no-repeat center center;">
-                      <h3 class="mb-2">24HR Racquet Delivery</h3>
-                      <p>Get your racket professionally restrung and delivered to your academy within 24 hours, ensuring you’re always ready for action.</p>
+                  <div class="card-body player-section-card-div" style="background: url(images/24hr.png) no-repeat center center;">
+                      <h3 class="mb-2 player-fixed-height-title">24HR Racquet Delivery</h3>
+                      <p class="player-fixed-height-text">Get your racket professionally restrung and delivered to your academy within 24 hours, ensuring you’re always ready for action.</p>
                   </div>
               </div>
             </div>
             <div class="col-lg-3 col-md-4 mb-4">
                <div class="card player-card">
-                  <div class="card-body academy-section-card" style="background: url(images/livealerts.png) no-repeat center center;">
-                      <h3 class="mb-2">Live Alerts from Academy</h3>
-                      <p>Stay connected with real-time notifications about training sessions, promotions, tournament details, and personalized messages from your academy/coaches.</p>
+                  <div class="card-body player-section-card-div" style="background: url(images/livealerts.png) no-repeat center center;">
+                      <h3 class="mb-2 player-fixed-height-title">Live Alerts from Academy</h3>
+                      <p class="player-fixed-height-text">Stay connected with real-time notifications about training sessions, promotions, tournament details, and personalized messages from your academy/coaches.</p>
                   </div>
               </div>
             </div>

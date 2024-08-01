@@ -26,6 +26,26 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClTrnymokTG0RIaJTbaA_4CkuVD2XhlTY&callback=initMap" async defer></script>
+    <script>
+      function initMap() {
+        // Coordinates for the marker
+        var coords = { lat: 17.4381239, lng: 78.4503681 };
+
+        // Create the map centered at the given coordinates
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 15,
+          center: coords,
+        });
+
+        // Place a marker at the given coordinates
+        var marker = new google.maps.Marker({
+          position: coords,
+          map: map,
+          title: 'StringUp', // Add a title for the marker
+        });
+      }
+    </script>
 </head>
 
 <body>
@@ -96,7 +116,7 @@
 						<ul class="list-unstyled">
 							<!-- <li><a href="tel:8390065439288">+8 - 3900 6543 9288
 								</a></li> -->
-							<li><a href="tel:91912862790">+91-912862790</a></li>
+							<li><a href="tel:91912862790">+91-9121862790</a></li>
 						</ul>
 					</div> <!-- Card End -->
 				</div>
@@ -128,10 +148,7 @@
 	<!-- Contact Section End -->
 
 	<!-- Google Map Section End -->
-	<iframe class="google-map"
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.100625936217!2d78.44383187499154!3d17.4381247879205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91170b11f6a7%3A0x3c4c7f7b6f6bbd4f!2sSidhi%20Apartments%2C%20Dharam%20Karam%20Rd%2C%20Park%20Avenue%20Colony%2C%20Ameerpet%2C%20Hyderabad%2C%20Telangana%20500016%2C%20India!5e0!3m2!1sen!2sus!4v1699804501234!5m2!1sen!2sus"
-    style="border:0;" allowfullscreen loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade"></iframe>
+	<div id="map" class="google-map"></div>
 	<!-- Google Map Section End -->
 
 	<!-- Contact Section Start -->
@@ -140,8 +157,8 @@
 			<div class="row">
 				<div class="col-lg-6">
 					<div class="contact-txt">
-						<h2 class="sec-title primary line-left">Feel Free to Contact with Us anytime</h2>
-						<p>Ready to experience the difference of a perfectly re-strung racket? Reach out to us today to learn more about our services, pricing, and how we can help you up your badminton game. Join the STRINGUP family and elevate your playing experience.</p>
+						<h2 class="sec-title primary line-left">Feel Free to Contact Us anytime</h2>
+						<p>Ready to experience the difference of a perfectly re-strung racket? Reach out to us today to learn more about our services, pricing, and how we can help you up your badminton game. Join the StringUp family and elevate your playing experience.</p>
 
 					</div>
 				</div>
@@ -296,11 +313,19 @@
 		event.preventDefault();
 
 		const name = document.getElementById('name').value;
-		const subject = document.getElementById('select-options').value;
+		let subject = document.getElementById('select-options').value;
 		const email = document.getElementById('email').value;
 		const phone = document.getElementById('phone').value;
 		const message = document.getElementById('message').value;
-
+		let subjectMap = {"1": "Player", "2": "Academy", "3": "Feedback"};
+		if (subject !== '' && typeof subject !== 'undefined') {
+			subject = subjectMap[subject];
+		}else{
+			subject = 'StringUp';
+		}
+		if (email === '' || typeof email === 'undefined' || email.indexOf('@') === -1 || name === '' || typeof name === 'undefined' || message === '' || typeof message === 'undefined' || phone === '' || typeof phone === 'undefined') {
+			return false;
+		}
 		const data = {
 			name: name,
 			subject: subject,
@@ -310,16 +335,28 @@
 		};
 
 		const xhr = new XMLHttpRequest();
-		xhr.open('POST', 'https://your-api-url.com/submit', true); // Replace with your API URL
+		xhr.open('POST', 'https://us-central1-stringup-56ae0.cloudfunctions.net/sendContactUserForm', true); // Replace with your API URL
 		xhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
 
 		xhr.onreadystatechange = function() {
 			if (xhr.readyState === 4) {
 				const responseDiv = document.getElementById('formResponse');
 				if (xhr.status === 200) {
+					document.getElementById('name').value = '';
+					document.getElementById('select-options').value = '';
+					document.getElementById('email').value = '';
+					document.getElementById('phone').value = '';
+					document.getElementById('message').value = '';
 					responseDiv.innerHTML = '<p class="text-success">Your message has been sent successfully!</p>';
+					setTimeout(function(){
+						responseDiv.innerHTML = '';
+					}, 3000);
+					
 				} else {
 					responseDiv.innerHTML = '<p class="text-danger">There was an error sending your message. Please try again later.</p>';
+					setTimeout(function(){
+						responseDiv.innerHTML = '';
+					}, 3000);
 				}
 			}
 		};

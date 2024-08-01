@@ -391,8 +391,21 @@ span.lead {
 
 .academy-section-card {
     width: 100%;
-    height: 393px;
-    padding: 110px 32px 110px 32px;
+    height: 465px;
+    padding: 120px 32px 110px 32px;
+    border-radius: 16px;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    display: flex;
+    background-color: transparent;
+    color: #ffffff;
+}
+.player-section-card-div {
+    width: 100%;
+    height: 395px;
+    padding: 80px 32px 75px 32px;
     border-radius: 16px;
     overflow: hidden;
     flex-direction: column;
@@ -411,6 +424,21 @@ span.lead {
 }
 
 .academy-section-card h3 {
+    font-family: 'InterBold';
+    color: #FFFFFF;
+    font-size: 24px;
+    letter-spacing: 0.1px;
+    left: 0px;
+    text-align: left;
+}
+.player-section-card-div p {
+    font-size: 16px;
+    letter-spacing: 0.1px;
+    line-height: 24px;
+    text-align: left;
+}
+
+.player-section-card-div h3 {
     font-family: 'InterBold';
     color: #FFFFFF;
     font-size: 24px;
@@ -609,7 +637,7 @@ span.lead {
     color: #283973;
 }
 .sec-title.line-left:before, .sec-title.line:before {
-    background-color: #F06554;
+    background-color: #283973;
     width: 25%;
 }
 .sec-title {
@@ -625,9 +653,7 @@ span.lead {
 .single-match {
     background-color: #ffffff;
 }
-.about-tab .nav-tabs li .nav-link.active:before, .about-tab .nav-tabs li .nav-link:focus:before {
-    background-color: #F06554;      
-}
+
 header .navbar .navbar-nav li a.nav-link {
     color: #273775;
     font-size: 16px;
@@ -706,7 +732,7 @@ header .navbar .nav-cta a.btn {
     font-family: 'HelveticaBold';
     color: #273775;
     letter-spacing: 0.1px;
-
+    text-transform: capitalize;
 }
 .about-tab .nav-tabs li .nav-link.active:before, .about-tab .nav-tabs li .nav-link:focus:before {
     background-color: #273775;
@@ -830,9 +856,13 @@ a.navbar-brand {
 .desktop-carousel {
     display: block;
 }
-/* .about-tab .nav-tabs li .nav-link {
-    font-family: HelveticaBold;
-} */
+.pt-24 {
+    padding-top: 24px;
+}
+.sec-title {
+    text-transform: capitalize;
+    color: #273775;
+}
   /* Responsive Styles */
   @media (max-width: 1200px) {
     .aboutus-title {
