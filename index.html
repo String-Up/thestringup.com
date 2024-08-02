@@ -39,45 +39,7 @@
     /* Ensure card has a fixed height */
 
 
-/* Ensure h3 has a fixed height and overflow is handled */
-.fixed-height-title {
-  height: 58px; /* Adjust this value as needed */
-  overflow: hidden; /* Ensures that overflow text is hidden */
-  text-overflow: ellipsis; /* Adds ellipsis (...) if text is too long */
-  align-items: center; /* Vertically centers the text */
-}
 
-/* Ensure p has a fixed height and overflow is handled */
-.fixed-height-text {
-  height: 150px; /* Adjust this value as needed */
-  overflow: hidden; /* Ensures that overflow text is hidden */
-  text-overflow: ellipsis; /* Adds ellipsis (...) if text is too long */
-  display: -webkit-box;
-  -webkit-line-clamp: 6; /* Limits text to 6 lines */
-  -webkit-box-orient: vertical;
-  line-height: 1.5;
-  max-height: calc(1.5em * 6); /* Adjust based on line-height and number of lines */
-  overflow: hidden; /* Ensures that overflow text is hidden */
-}
-.player-fixed-height-title {
-  height: 68px; /* Adjust this value as needed */
-  overflow: hidden; /* Ensures that overflow text is hidden */
-  text-overflow: ellipsis; /* Adds ellipsis (...) if text is too long */
-  align-items: center; /* Vertically centers the text */
-}
-
-/* Ensure p has a fixed height and overflow is handled */
-.player-fixed-height-text {
-  height: 165px; /* Adjust this value as needed */
-  overflow: hidden; /* Ensures that overflow text is hidden */
-  text-overflow: ellipsis; /* Adds ellipsis (...) if text is too long */
-  display: -webkit-box;
-  -webkit-line-clamp: 6; /* Limits text to 6 lines */
-  -webkit-box-orient: vertical;
-  line-height: 1.5;
-  max-height: calc(1.5em * 6); /* Adjust based on line-height and number of lines */
-  overflow: hidden; /* Ensures that overflow text is hidden */
-}
     /* .carousel-item {
       display: none;
       transition: transform 0.6s ease-in-out;
@@ -627,6 +589,9 @@
    function handleResize() {
     const desktopCarousel = document.getElementById('desktopCarousel');
     const mobileCarousel = document.getElementById('mobileCarousel');
+    new bootstrap.Carousel(mobileCarousel, {
+         interval: 100000,
+      })
     const screenWidth = window.innerWidth;
     
     if (screenWidth >= 768) {

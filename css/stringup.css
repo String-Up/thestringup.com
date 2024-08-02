@@ -28,12 +28,13 @@
     src: url('../fonts/helvetica/HelveticaNeueMedium.otf') format('opentype');
 }
 
-body {
+html, body {
     font-family: 'InterRegular';
     margin: 0;
     padding: 0;
     overflow-x: hidden; /* Prevent horizontal scrolling */
     background-color: #ffffff;
+    width: 100%;
 }
 .preloader span {
     background: #283973;
@@ -877,6 +878,48 @@ a.navbar-brand {
 .header-logo {
     width: 100%;
 }
+/* Ensure h3 has a fixed height and overflow is handled */
+.fixed-height-title {
+    height: 58px; /* Adjust this value as needed */
+    overflow: hidden; /* Ensures that overflow text is hidden */
+    text-overflow: ellipsis; /* Adds ellipsis (...) if text is too long */
+    align-items: center; /* Vertically centers the text */
+  }
+  
+  /* Ensure p has a fixed height and overflow is handled */
+  .fixed-height-text {
+    height: 150px; /* Adjust this value as needed */
+    overflow: hidden; /* Ensures that overflow text is hidden */
+    text-overflow: ellipsis; /* Adds ellipsis (...) if text is too long */
+    display: -webkit-box;
+    -webkit-line-clamp: 6; /* Limits text to 6 lines */
+    -webkit-box-orient: vertical;
+    line-height: 1.5;
+    max-height: calc(1.5em * 6); /* Adjust based on line-height and number of lines */
+    overflow: hidden; /* Ensures that overflow text is hidden */
+  }
+  .player-fixed-height-title {
+    height: 68px; /* Adjust this value as needed */
+    overflow: hidden; /* Ensures that overflow text is hidden */
+    text-overflow: ellipsis; /* Adds ellipsis (...) if text is too long */
+    align-items: center; /* Vertically centers the text */
+  }
+  
+  /* Ensure p has a fixed height and overflow is handled */
+  .player-fixed-height-text {
+    height: 165px; /* Adjust this value as needed */
+    overflow: hidden; /* Ensures that overflow text is hidden */
+    text-overflow: ellipsis; /* Adds ellipsis (...) if text is too long */
+    display: -webkit-box;
+    -webkit-line-clamp: 6; /* Limits text to 6 lines */
+    -webkit-box-orient: vertical;
+    line-height: 1.5;
+    max-height: calc(1.5em * 6); /* Adjust based on line-height and number of lines */
+    overflow: hidden; /* Ensures that overflow text is hidden */
+  }
+  .player-card {
+    background: #F9F7E7 !important;
+  }
   /* Responsive Styles */
   @media (max-width: 1200px) {
     .aboutus-title {
@@ -1056,7 +1099,7 @@ a.navbar-brand {
         right: -40px;
     }
     .player-card {
-        background: #F9F7E7;
+        background: #F9F7E7 !important;
         padding: 32px;
     }
     .headline {
@@ -1100,10 +1143,36 @@ a.navbar-brand {
     .desktop-carousel {
         display: none;
     }
+    .academy-section-card {
+        height: 390px;
+    }
+    .player-section-card-div {
+        padding: 75px 32px 0px 32px;
+        height: 386px;
+    }
+    .player-fixed-height-text {
+        height: auto;
+        -webkit-line-clamp: 8;
+        max-height: calc(1.5em* 8);
+    }
 }
  /** Courosel CSS **/
- @media (max-width: 768px) {
-    
+ @media (max-width: 412px) {
+    .academy-section-card {
+        height: 390px;
+    }
+    .player-section-card-div {
+        padding: 75px 32px 0px 32px;
+        height: 386px;
+    }
+    .player-fixed-height-text {
+        height: auto;
+        -webkit-line-clamp: 8;
+        max-height: calc(1.5em* 8);
+    }
+    .navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container-xl, .navbar>.container-xxl {
+        justify-content: normal;
+    }
 }
 
 
