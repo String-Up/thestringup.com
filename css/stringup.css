@@ -358,7 +358,7 @@ span.lead {
     text-transform: uppercase;
     line-height: 20px;
     word-wrap: break-word;
-    margin-top: 50px;
+    margin-top: 70px;
 }
 
 .horizontal-inset {
@@ -625,21 +625,25 @@ span.lead {
     background-color: #283973;
     color: #ffffff;
   }
+  .contact-card:hover .icon, .contact-card:hover .icon-sm {
+    background-color: #283973;
+    color: #ffffff;
+  }
   .contact-card .icon-sm i, .contactus-card .icon i {
     color: #ffffff;
-}
+ }
 
   .contactus-card:hover {
-    background-color: #283973;
+    background-color: #f6f6f6;
     /* color: #ffffff !important; */
   }
 
-  .contactus-card:hover h3, .contactus-card:hover a, .contactus-card:hover p {
-    color: #ffffff; /* Hover color */
-}
-.contactus-card:hover i {
+/* .contactus-card:hover h3, .contactus-card:hover a, .contactus-card:hover p {
+    color: #ffffff; 
+} */
+/* .contactus-card:hover i {
     color: #283973;
-}
+} */
 .sec-title.line-left:before, .sec-title.line:before {
     background-color: #283973;
     width: 25%;
@@ -852,7 +856,7 @@ h3 {
     position: relative;
 }
 a.navbar-brand {
-    width: 200px;
+    width: 300px;
 }
 .mobile-carousel {
     display: none;
@@ -869,6 +873,9 @@ a.navbar-brand {
 }
 .contact-card .h3, .contact-card h3 {
     text-transform: capitalize;
+}
+.header-logo {
+    width: 100%;
 }
   /* Responsive Styles */
   @media (max-width: 1200px) {
@@ -1000,6 +1007,9 @@ a.navbar-brand {
 }
 
 @media (max-width: 576px) {
+    .header-logo {
+        width: 100%;
+    }
     .aboutus-title {
         font-size: 36px;
       }
